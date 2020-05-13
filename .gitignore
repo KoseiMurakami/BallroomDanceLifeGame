@@ -1,0 +1,70 @@
+＃この.gitignoreファイルはUnityプロジェクトディレクトリのルートに配置する必要があります
+＃
+＃ https://github.com/github/gitignore/blob/master/Unity.gitignoreから最新の情報を取得します
+＃
+/ [ Ll ] ibrary /
+/ [ Tt ] emp /
+/ [ Oo ] bj /
+/ [ Bb ] uild /
+/ [ Bb ] uilds /
+/ [ Ll ] ogs /
+/ [ Uu ] ser [ Ss ] ettings /
+
+＃の MemoryCapturesのサイズが過度に取得することができます。
+＃非常に機密性の高いデータが含まれている可能性もあります
+/ [ Mm ] emoryCaptures /
+
+＃アセットのメタデータは、対応するアセットも無視される場合にのみ無視されるべきです
+！/ [ Aa ] ssets / ** / * .meta
+
+＃アセットストアツールプラグインを無視する場合は、この行のコメントを外します
+＃ / [Aa] ssets / AssetStoreTools *
+
+＃自動生成されたJetbrains Riderプラグイン
+/ [ Aa ] ssets / プラグイン / エディター / JetBrains *
+
+＃ Visual Studioのキャッシュディレクトリ
+.vs /
+
+＃ Gradleのキャッシュディレクトリ
+.gradle /
+
+＃自動生成されたVS / MD / Consuloソリューションおよびプロジェクトファイル
+ExportedObj /
+.consulo /
+* .csproj
+* .unityproj
+* .sln
+* .suo
+* .tmp
+* .user
+* .userprefs
+* .pidb
+* .booproj
+* .svd
+* .pdb
+* .mdb
+* .opendb
+* .VC.db
+
+＃ Unity3Dで生成されたメタファイル
+* .pidb.meta
+* .pdb.meta
+* .mdb.meta
+
+＃クラッシュレポートで生成されたUnity3Dファイル
+sysinfo.txt
+
+＃ビルド
+* .apk
+* .unitypackage
+
+＃ Crashlytics生成されたファイル
+crashlytics-build.properties
+
+＃パックされたアドレス指定可能
+/ [ Aa ] ssets / [ Aa ] ddressable [ Aa ] ssets [ Dd ] ata / * / * .bin *
+
+＃自動生成された一時的なAndroidアセット
+/ [ Aa ] ssets / [ Ss ] treamingAssets / aa.meta
+/ [ Aa ] ssets / [ Ss ] treamingAssets / aa / *
