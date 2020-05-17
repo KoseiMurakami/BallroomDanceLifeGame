@@ -13,15 +13,4161 @@ MonoBehaviour:
   m_Name: MstSquares
   m_EditorClassIdentifier: 
   entities:
-  - id: 0
-    squareKind: 0
   - id: 1
     squareKind: 0
+    nextId: 2
+    pointKind: M.P
+    points: 50
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u3053\u308C\u304B\u3089\u306E\u5927\u5B66\u751F\u6D3B\u306B\u5411\u3051\u3066\u7956\u7236\u6BCD\u304B\u3089\u5165\u5B66\u795D\u3092\u3082\u3089\u3046\u3002"
   - id: 2
     squareKind: 0
+    nextId: 3
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E0A\u56DE\u751F\u304B\u3089\u30EF\u30EB\u30C4\u3001\u30EB\u30F3\u30D0\u306E\u30D9\u30FC\u30B7\u30C3\u30AF\u3092\u7FD2\u3046\u3002"
   - id: 3
     squareKind: 0
+    nextId: 4
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u65B0\u52E7\u3082\u304B\u306D\u3066\u3001\u5148\u8F29\u304C\u30C9\u30E9\u30A4\u30D6\u306B\u9023\u308C\u3066\u884C\u3063\u3066\u304F\u308C\u305F\u3002"
   - id: 4
     squareKind: 0
+    nextId: 5
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30DB\u30FC\u30EB\u3067\u8E0A\u308B\u5148\u8F29\u306E\u30C0\u30F3\u30B9\u98A8\u666F\u3092\u898B\u3064\u3064\u3001\u5916\u7DF4\u3092\u3059\u308B\u3002"
   - id: 5
     squareKind: 0
+    nextId: 6
+    pointKind: M.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u305F\u3061\u306B\u7DF4\u7FD2\u5F8C\u3001\u30DC\u30F3\u30EB\u30D1\uFF08\u5B9A\u98DF\u5C4B\uFF09\u3067\u5962\u3063\u3066\u3082\u3089\u3046\u3002"
+  - id: 6
+    squareKind: 0
+    nextId: 7
+    pointKind: D.P,MP
+    points: 30,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30C0\u30F3\u30B9\u30B7\u30E5\u30FC\u30BA\u304C\u5C4A\u3044\u3066\u3001\u666E\u6BB5\u3088\u308A\u7DF4\u7FD2\u306B\u8EAB\u304C\u5165\u308B\u3002"
+  - id: 7
+    squareKind: 0
+    nextId: 8
+    pointKind: LP
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u9AD8\u6821\u306E\u6642\u304B\u3089\u597D\u304D\u3060\u3063\u305F\u5B50\u306B\u7AF6\u6280\u30C0\u30F3\u30B9\u90E8\u306B\u5165\u3063\u305F\u3068\u5831\u544A\u3002\u9023\u7D61\u4ED8\u304B\u306A\u304F\u306A\u308B\u3002"
+  - id: 8
+    squareKind: 0
+    nextId: 9
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u306B\u5B85\u98F2\u307F\u3092\u958B\u3044\u3066\u3082\u3089\u3044\u3001\u540C\u671F\u3068\u3082\u4EF2\u826F\u304F\u306A\u308B\u3002"
+  - id: 9
+    squareKind: 0
+    nextId: 10
+    pointKind: P.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u306B\u30C0\u30F3\u30B9\u3092\u6559\u3048\u3066\u3082\u3089\u3046\u4E2D\u3001\u305F\u3081\u53E3\u3092\u4F7F\u3063\u3066\u3057\u307E\u3044\u3001\u6CE8\u610F\u3055\u308C\u308B\u3002"
+  - id: 10
+    squareKind: 1
+    nextId: 11
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E94\u6708\u4E2D\u56DB"
+  - id: 11
+    squareKind: 0
+    nextId: 12
+    pointKind: D.P,P.P,M.P
+    points: 10,20,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E94\u6708\u4E2D\u56DB\u98F2\u307F\u306E\u5F8C\u3082\u5148\u8F29\u65B9\u3068\u4E09\u6B21\u4F1A\u307E\u3067\u884C\u304D\u3001\u4EF2\u826F\u304F\u306A\u308B"
+  - id: 12
+    squareKind: 0
+    nextId: 13
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E94\u6708\u4E2D\u56DB\u306E\u7D50\u679C\u306B\u6094\u3057\u304F\u3066\u7DF4\u7FD2\u306B\u71C3\u3048\u308B\u3002"
+  - id: 13
+    squareKind: 0
+    nextId: 14
+    pointKind: M.P
+    points: -10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30DF\u30FC\u30EB\u30AB\u30FC\u30C9\u3092\u5FD8\u308C\u3066\u98DF\u5802\u306B\u884C\u3063\u3066\u73FE\u91D1\u6255\u3044\u306B\u306A\u308B\u3002"
+  - id: 14
+    squareKind: 0
+    nextId: 15
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30C1\u30E3\u30C1\u30E3\u3001\u30AF\u30A4\u30C3\u30AF\u30B9\u30C6\u30C3\u30D7\u3092\u6559\u308F\u308B\u3002"
+  - id: 15
+    squareKind: 0
+    nextId: 16
+    pointKind: L.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E94\u6708\u4E2D\u56DB\u306E\u6642\u306B\u7D44\u3093\u3060\u30D1\u30FC\u30C8\u30CA\u30FC\u3068\u4E8C\u4EBA\u3067\u3054\u98EF\u306B\u8A98\u308F\u308C\u308B\u3002"
+  - id: 16
+    squareKind: 0
+    nextId: 17
+    pointKind: D.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E94\u6708\u4E2D\u56DB\u4EE5\u964D\u3001\u7DF4\u7FD2\u306B\u53C2\u52A0\u3059\u308B\u306E\u304C\u6E1B\u308B\u3002\u307E\u3042\u5148\u8F29\u3082\u90311\u3067\u304D\u305F\u3089\u3044\u3044\u8A00\u3046\u3066\u305F\u3057\u554F\u984C\u306A\u3044\u3067\u3057\u3087\u3046\u3088\u3002"
+  - id: 17
+    squareKind: 0
+    nextId: 18
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u521D\u3081\u3066\u540C\u671F\u306E\u4E00\u90E8\u3067\u96C6\u307E\u3063\u3066\u5B85\u98F2\u307F\u3092\u3059\u308B\u3002"
+  - id: 18
+    squareKind: 0
+    nextId: 19
+    pointKind: 
+    points: 
+    lankKind: L.L
+    lankPoints: 1
+    warpId: 0
+    eventText: "\u4E94\u6708\u4E2D\u56DB\u4EE5\u964D\u3001\u4EF2\u826F\u304F\u306A\u3063\u305F\u540C\u671F\u3068\u4ED8\u304D\u5408\u3046\u3053\u3068\u306B\u306A\u308B\u3002\u6B7B\u306D\u3070\u3044\u3044\u3068\u601D\u3044\u307E\u3059\u3002\u3010\u30EA\u30A2\u5145\u30E9\u30F3\u30AF+1\u3011"
+  - id: 19
+    squareKind: 0
+    nextId: 20
+    pointKind: P.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u65B0\u52E7\u65C5\u884C\u3067\u307F\u3093\u306A\u3088\u3044\u3057\u3087\u3055\u308C\u3066\u3001\u6C17\u5206\u3088\u3055\u3052\u3002\u9A19\u3055\u308C\u3064\u3064\u3042\u308B\u65B0\u5165\u751F\u304C\u5897\u3048\u3060\u3057\u305F\u3002\u3002\u3002"
+  - id: 20
+    squareKind: 0
+    nextId: 21
+    pointKind: D.P
+    points: -10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "OB\u676F\u306E\u7DF4\u7FD2\u304C\u59CB\u307E\u3063\u305F\u304C\u3001\u597D\u304D\u306A\u5C02\u653B\u3092\u9078\u3079\u306A\u304B\u3063\u305F\u3002\u30B7\u30E7\u30C3\u30AF\u3067\u3059\u3002"
+  - id: 21
+    squareKind: 0
+    nextId: 22
+    pointKind: D.P,P.P
+    points: -30, 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "OB\u676F\u306E\u7DF4\u7FD2\u304C\u59CB\u307E\u3063\u305F\u304C\u3001\u5148\u8F29\u304C\u5FD9\u3057\u304F\u3001\u306A\u304B\u306A\u304B\u6765\u3066\u3082\u3089\u3048\u306A\u3044\u3001\u3001\u3001\u6765\u5E74\u4EE5\u964D\u81EA\u5206\u3060\u3051\u3067\u3082\u3057\u3063\u304B\u308A\u3057\u3088\u3046\u601D\u3046\u3002"
+  - id: 22
+    squareKind: 0
+    nextId: 23
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u305F\u3061\u306E\u590F\u5168\u306B\u5411\u3051\u3066\u3001\u663C\u304B\u3089\u6669\u307E\u3067\u7DF4\u7FD2\u3057\u3066\u308B\u306E\u5FC3\u6253\u305F\u308C\u3066\u9811\u5F35\u308D\u3046\u3068\u601D\u3046\u3002\u3053\u306E\u4EBA\u3089\u3044\u3064\u6388\u696D\u884C\u3063\u3066\u308B\u3093\u3084\u308D\u304B\u3002"
+  - id: 23
+    squareKind: 0
+    nextId: 24
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "OB\u676F\u306E\u81EA\u5206\u306E\u30C1\u30FC\u30E0\u306E\u30EC\u30AE\u30E5\u30E9\u30FC\u304C\u52DD\u5229\u3059\u308B\u3053\u3068\u3092\u9858\u3063\u3066\u56E3\u6247\u3065\u304F\u308A\u3092\u3059\u308B\u3002"
+  - id: 24
+    squareKind: 0
+    nextId: 25
+    pointKind: L.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "OB\u676F\u3067\u30DA\u30A2\u306B\u306A\u3063\u305F\u5148\u8F29\u306B\u53EF\u611B\u304C\u3089\u308C\u308B\u3002\u30EF\u30A4\u3089\u306B\u306F\u5148\u8F29\u306F\u307F\u3093\u306A\u7D20\u6575\u306B\u898B\u3048\u308B\u3082\u3093\u3067\u3059\u306D\u3002"
+  - id: 25
+    squareKind: 0
+    nextId: 26
+    pointKind: D.P,P.P
+    points: 10,10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "OB\u676F\u3067\u89AA\u3057\u304F\u306A\u3063\u305F\u5148\u8F29\u3092\u4E2D\u5FC3\u306B\u30C0\u30F3\u30B9\u3092\u6559\u3048\u3066\u3082\u3089\u3046\u3002"
+  - id: 26
+    squareKind: 0
+    nextId: 27
+    pointKind: M.P
+    points: 15
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30A2\u30EB\u30D0\u30A4\u30C8\u3092\u59CB\u3081\u308B\u3002\u3068\u308A\u3042\u3048\u305A\u98DF\u8CBB\u306F\u6291\u3048\u308B\u3053\u3068\u304C\u3067\u304D\u305D\u3046\u3060"
+  - id: 27
+    squareKind: 0
+    nextId: 28
+    pointKind: D.P,M.P
+    points: -30,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30A4\u30F3\u30D5\u30EB\u30A8\u30F3\u30B6\u306B\u306A\u3063\u3066\u7DF4\u7FD2\u306B\u5F53\u5206\u884C\u3051\u306A\u304F\u306A\u3063\u305F\u3002\u3053\u308C\u3070\u3063\u304B\u308A\u306F\u4ED5\u65B9\u306A\u3044\u306A\u30FC\u3002"
+  - id: 28
+    squareKind: 0
+    nextId: 29
+    pointKind: M.P
+    points: -10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u521D\u3081\u3066\u4E00\u4EBA\u3067\u5B85\u98F2\u307F\u3092\u3057\u3066\u3001\u5927\u4EBA\u306B\u306A\u3063\u305F\u6C17\u5206\u3060\u308F\u3002"
+  - id: 29
+    squareKind: 0
+    nextId: 30
+    pointKind: P.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u98F2\u307F\u3059\u304E\u3066\u3001\u5148\u8F29\u65B9\u306B\u8FF7\u60D1\u3092\u304B\u3051\u308B\u3002\u5BDD\u30B2\u30ED\u3001\u7533\u3057\u8A33\u306A\u3044\u3067\u3059\u3002"
+  - id: 30
+    squareKind: 0
+    nextId: 31
+    pointKind: P.P,M.P
+    points: 10,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u65B9\u306B\u30D3\u30FC\u30EB\u3044\u3063\u304D\u3092\u6559\u308F\u308B\u3002\u4EE3\u511F\u306B\u7FCC\u65E5\u8A18\u61B6\u306F\u306A\u3044\u304C\u3001\u670D\u304C\u7834\u308C\u3066\u308B\u3002\uFF0A\u3053\u308C\u306F\u3042\u304F\u307E\u3067\u4EBA\u751F\u30B2\u30FC\u30E0\u5185\u306E\u8A71\u3067\u3059\u3002"
+  - id: 31
+    squareKind: 0
+    nextId: 32
+    pointKind: L.P,P.P
+    points: 20,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u65B9\u3068\u98F2\u3093\u3067\u3066\u3001\u7570\u6027\u306E\u5148\u8F29\u306B\u82B1\u706B\u306E\u8A98\u3044\u306E\u9023\u7D61\u3092\u52DD\u624B\u306B\u3055\u308C\u308B\u3002\u305D\u308C\u306B\u5BFE\u3057\u3066\u306E\u8FD4\u4E8B\u306F\u306A\u3044\u304C\u3001\u76F8\u624B\u3068\u9023\u7D61\u304C\u7D9A\u304F\u3088\u3046\u306B\u306A\u308B\u3002"
+  - id: 32
+    squareKind: 0
+    nextId: 33
+    pointKind: L.P,M.P
+    points: 30,-15
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "OB\u676F\u3067\u4EF2\u826F\u304F\u306A\u3063\u305F\u76F8\u624B\u3068\u82B1\u706B\u5927\u4F1A\u306B\u884C\u304F\u3053\u3068\u306B\u306A\u3063\u305F\u3002\u6D74\u8863\u3082\u8CB7\u3046\u3084\u3067\u3002"
+  - id: 33
+    squareKind: 0
+    nextId: 34
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u590F\u4F11\u307F\u304C\u59CB\u307E\u3063\u3066\u3001\u521D\u65E5\u3084\u3057\u5F35\u308A\u5207\u3063\u3066\u3001\u307B\u307C\u4E38\u4E00\u65E5\u30DB\u30FC\u30EB\u3067\u904E\u3054\u3057\u305F\u3002\uFF08\u7DF4\u7FD2\u3057\u305F\u3068\u306F\u8A00\u3063\u3066\u306A\u3044\u3002\uFF09"
+  - id: 34
+    squareKind: 0
+    nextId: 35
+    pointKind: M.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u521D\u3081\u3066\u5BB6\u306B\u51FA\u524D\u3092\u6CE8\u6587\u3057\u305F\u3002\u305D\u308C\u4EE5\u964D\u3001\u30C1\u30E9\u30B7\u304C\u30DD\u30B9\u30C8\u306B\u30AC\u30F3\u30AC\u30F3\u5165\u3063\u3066\u304F\u308B\u3002\u3046\u3056\u3059\u304E\u3002"
+  - id: 35
+    squareKind: 0
+    nextId: 36
+    pointKind: D.P,M.P
+    points: -20,-20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u590F\u4F11\u307F\u3067\u30AA\u30FC\u30EB\u3002\u7DF4\u7FD2\u306B\u9045\u523B\u3057\u3066\u3001\u30D1\u30FC\u30C8\u30CA\u30FC\u304C\u30D6\u30C1\u30AE\u30EC\u3002\u30E2\u30F3\u30CF\u30F3\u304C\u60AA\u3044\u3002"
+  - id: 36
+    squareKind: 0
+    nextId: 37
+    pointKind: L.P,P.P
+    points: 20,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u829D\u30B3\u30F3\u3067\u3044\u3044\u96F0\u56F2\u6C17\u306B\u306A\u3063\u305F\u304B\u3089\u3001\u3059\u307E\u3093\u3051\u3069\u540C\u671F\u3092\u898B\u6368\u3066\u3066\u95C7\u591C\u306B\u6D88\u3048\u3055\u305B\u3066\u3082\u3089\u3046\u3084\u3067\u3002"
+  - id: 37
+    squareKind: 0
+    nextId: 38
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 901
+    eventText: "\u5F37\u7DF4\u3067\u30CA\u30C1\u30E5\u30EA\u30D0\u3055\u307C\u3063\u3066\u3093\u3058\u3083\u306D\u30FC\u3088\uFF01\u8CB4\u69D8\u306F\u826F\u3044\u3066\u8A00\u3046\u307E\u3067\u821E\u3044\u7D9A\u3051\u3084\u304C\u308C\u3044\uFF01\uFF01\uFF01"
+  - id: 38
+    squareKind: 0
+    nextId: 39
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 901
+    eventText: "\u5F37\u7DF4\u3067\u30CA\u30C1\u30E5\u30EA\u30D0\u3055\u307C\u3063\u3066\u3093\u3058\u3083\u306D\u30FC\u3088\uFF01\u8CB4\u69D8\u306F\u826F\u3044\u3066\u8A00\u3046\u307E\u3067\u821E\u3044\u7D9A\u3051\u3084\u304C\u308C\u3044\uFF01\uFF01\uFF01"
+  - id: 39
+    squareKind: 0
+    nextId: 40
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 901
+    eventText: "\u5F37\u7DF4\u3067\u30CA\u30C1\u30E5\u30EA\u30D0\u3055\u307C\u3063\u3066\u3093\u3058\u3083\u306D\u30FC\u3088\uFF01\u8CB4\u69D8\u306F\u826F\u3044\u3066\u8A00\u3046\u307E\u3067\u821E\u3044\u7D9A\u3051\u3084\u304C\u308C\u3044\uFF01\uFF01\uFF01"
+  - id: 40
+    squareKind: 0
+    nextId: 41
+    pointKind: P.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5F37\u7DF4\u98F2\u307F\u3067\u75B2\u308C\u3066\u3044\u305F\u306E\u3082\u3042\u308A\u3001\u6628\u65E5\u3059\u3050\u6F70\u308C\u3066\u3057\u307E\u3044\u5468\u308A\u306B\u8FF7\u60D1\u3092\u304B\u3051\u308B\u3002"
+  - id: 41
+    squareKind: 0
+    nextId: 42
+    pointKind: D.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5F37\u7DF4\u75B2\u308C\u305F\u3093\u3067\u3001\u4ECA\u65E5\u306F\u304A\u4F11\u307F\u3055\u305B\u3066\u3044\u305F\u3060\u304D\u307E\u3059\u3002\u3002"
+  - id: 42
+    squareKind: 0
+    nextId: 43
+    pointKind: P.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5F37\u7DF4\u7D42\u308F\u308A\u306B\u5148\u8F29\u304C\u52D5\u753B\u3092\u78BA\u8A8D\u3057\u305F\u3051\u3069\u3001\u81EA\u5206\u306E\u30DF\u30B9\u3067\u64AE\u308C\u3066\u3044\u306A\u304B\u3063\u305F\u3001\u3001\u3059\u307F\u307E\u305B\u3093\u3057\u305F\u3002"
+  - id: 43
+    squareKind: 0
+    nextId: 44
+    pointKind: L.P,P.P
+    points: -20,10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u9AEA\u4E0A\u3052\u3092\u3057\u3066\u3044\u308B\u3046\u3061\u306B\u3001\u30CF\u30B2\u30AD\u30E3\u30E9\u8A8D\u5B9A\u3055\u308C\u308B\u3002"
+  - id: 44
+    squareKind: 0
+    nextId: 45
+    pointKind: D.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5927\u4F1A\u3067\u9045\u523B\u3057\u305D\u3046\u306B\u306A\u3063\u3066\u3001\u9AEA\u4E0A\u3052\u304C\u9069\u5F53\u3067\u6C5A\u3044\u72B6\u614B\u3067\u5927\u4F1A\u51FA\u5834\u3002\u5272\u308C\u76EE\u5165\u308A\u307E\u304F\u308A\uFF5E\uFF5E\uFF5E"
+  - id: 45
+    squareKind: 0
+    nextId: 46
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u306B\u9AEA\u4E0A\u3052\u3092\u6559\u3048\u3066\u3082\u3089\u3044\u3001\u518D\u5EA6\u9AEA\u4E0A\u3052\u306E\u4ED5\u65B9\u3092\u898B\u76F4\u3059\u3002"
+  - id: 46
+    squareKind: 0
+    nextId: 47
+    pointKind: P.P
+    points: -15
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u9762\u8AC7\u306E\u7D19\u306E\u63D0\u51FA\u65E5\u3092\u30B7\u30F3\u30D7\u30EB\u306B\u5FD8\u308C\u3066\u3066\u63D0\u51FA\u306B\u9045\u308C\u308B\u3002"
+  - id: 47
+    squareKind: 0
+    nextId: 48
+    pointKind: D.P,P.P
+    points: 30,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u521D\u3081\u3066\u95A2\u897F\u306E\u4ED6\u5927\u3068\u4E00\u7DD2\u306B\u7DF4\u7FD2\u3059\u308B\u3002\u7DF4\u7FD2\u306B\u529B\u306F\u3044\u308B\u3084\u3067\u30FC\uFF01\u98F2\u307F\u306F\u3001\u60AA\u9B54\u3060t\u2026"
+  - id: 48
+    squareKind: 0
+    nextId: 49
+    pointKind: M.P
+    points: 40
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u521D\u3081\u3066\u3001\u30C0\u30F3\u30D1\u306B\u884C\u304F\u3002\u30EF\u30A4\u306Eslow\u3067\u3053\u3093\u306A\u306B\u3082\u3089\u3063\u3066\u3048\u3048\u3093\u3084\u308D\u304B\uFF01\uFF01"
+  - id: 49
+    squareKind: 0
+    nextId: 50
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u3089\u304C\u5BB6\u306B\u4E71\u5165\u3057\u3066\u304F\u308B\u3002\u7DF4\u7FD2\u306E\u8A71\u306B\u306A\u308A\u3001\u5C11\u3057\u9811\u5F35\u308D\u3046\u601D\u3048\u305F\u3002\uFF08\u7DF4\u7FD2\u306B\u884C\u304F\u3068\u306F\u8A00\u3063\u3066\u306A\u3044\u3002\uFF09"
+  - id: 50
+    squareKind: 0
+    nextId: 51
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u306A\u3093\u3084\u304B\u3093\u3084\u3067\u7DF4\u7FD2\u306B\u6765\u305F\u3089\u3001\u6628\u65E5\u98F2\u3093\u3060\u5148\u8F29\u304C\u6559\u3048\u306B\u6765\u3066\u304F\u308C\u305F\u3002\u3053\u306E\u4EBA\u306B\u6771\u897F\u306E\u30EB\u30FC\u30C6\u30A3\u30F3\u304A\u9858\u3044\u3057\u3088\u304B\u306A\u3002"
+  - id: 51
+    squareKind: 0
+    nextId: 52
+    pointKind: 
+    points: 
+    lankKind: L.L
+    lankPoints: 1
+    warpId: 0
+    eventText: "\u30EA\u30FC\u30D1\u30FC\u306E\u56FA\u5B9A\u304C\u5909\u308F\u3063\u305F\u306B\u3082\u95A2\u308F\u3089\u305A\u3001\u672A\u3060\u306B\u9023\u7D61\u3092\u53D6\u308A\u5408\u3063\u3066\u308B\u9593\u306B\u4ED8\u304D\u5408\u3046\u3053\u3068\u306B\uFF01\u3053\u3093\u306A\u7D4C\u9A13\u306F\u66F8\u3044\u3066\u308B\u4FFA\u306B\u306F\u306A\u304B\u3063\u305F\u3051\u3069\u306A\u3002\u3010\u30EA\u30A2\u5145\u30E9\u30F3\u30AF+1\u3011"
+  - id: 52
+    squareKind: 0
+    nextId: 53
+    pointKind: D.P
+    points: 30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u306B\u30EB\u30FC\u30C6\u30A3\u30F3\u4F5C\u3063\u3066\u3082\u3089\u3046\u304C\u3001\u30A8\u30ED\u3044\u8DB3\u5F62\u3070\u304B\u308A\u3001\u3001\u3001\u5168\u304F\u56F0\u3063\u305F\u3082\u306E\u3060\uFF01"
+  - id: 53
+    squareKind: 0
+    nextId: 54
+    pointKind: M.P
+    points: -15
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30C1\u30E3\u30EA\u306E\u9375\u306A\u304F\u3057\u3066\u3001\u9375\u3076\u3063\u58CA\u3059\u3053\u3068\u306B\u3001\u3001\u3001"
+  - id: 54
+    squareKind: 0
+    nextId: 55
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u304A\u663C\u306B\u6642\u9593\u4F5C\u3063\u3066\u93E1\u306E\u524D\u3067\u6771\u897F\u306B\u5411\u3051\u3066\u731B\u7DF4\u7FD2\u3002"
+  - id: 55
+    squareKind: 0
+    nextId: 56
+    pointKind: P.P
+    points: -15
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4F11\u61A9\u304C\u3066\u3089\u306B\u7AEF\u3063\u3053\u3067\u5EA7\u3063\u3066\u30B2\u30FC\u30E0\u3057\u3066\u3044\u305F\u3089\u5148\u8F29\u306B\u6CE8\u610F\u3055\u308C\u305F\u3002\u3057\u3007\u3088\u3057\u304C\u60AA\u3044\u3002"
+  - id: 56
+    squareKind: 0
+    nextId: 57
+    pointKind: D.P,L.P
+    points: 20,10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u6771\u897F\u3067\u6210\u7E3E\u826F\u304F\u3066\u3001\u4E8C\u4EBA\u3067\u6253\u3061\u4E0A\u3052\u3002\u666E\u901A\u306B\u697D\u3057\u304B\u3063\u305F\u3002"
+  - id: 57
+    squareKind: 0
+    nextId: 58
+    pointKind: D.P,P.P
+    points: -10,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "11\u6708\u4E2D\u56DB\u524D\u306B\u3001\u597D\u304D\u306A\u5C02\u653B\u3057\u304B\u305B\u305A\u306B\u3001\u6307\u5C0E\u56DE\u306B\u6012\u3089\u308C\u308B\u3002"
+  - id: 58
+    squareKind: 0
+    nextId: 59
+    pointKind: D.P,P.P
+    points: -10,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "11\u6708\u4E2D\u56DB\u524D\u306B\u3001\u30EB\u30FC\u30C6\u30A3\u30F3\u3070\u304B\u308A\u3057\u3066\u3001\u30D1\u30BD\u304C\u3061\u3083\u3093\u3068\u8E0A\u308C\u305A\u3001\u6307\u5C0E\u56DE\u306B\u30B7\u30D0\u304B\u308C\u308B\u3002"
+  - id: 59
+    squareKind: 0
+    nextId: 60
+    pointKind: P.P
+    points: -10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u540C\u671F\u304C\u4E2D\u56DB\u5F8C\u306B\u3084\u3081\u308B\u3068\u8A00\u3044\u51FA\u3057\u305F\u3002\u4E00\u7DD2\u306B\u9811\u5F35\u308D\u3046\u3088\u3068\u8A00\u3046\u304C\u3001\u76F8\u624B\u306F\u3082\u3046\u5FC3\u306B\u6C7A\u3081\u3066\u3044\u308B\u3089\u3057\u304F\u3001\u5FC3\u306B\u97FF\u304B\u306A\u304B\u3063\u305F\u3002"
+  - id: 60
+    squareKind: 0
+    nextId: 61
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E2D\u56DB\u524D\u306B\u3001\u540C\u671F\u306E\u307F\u3093\u306A\u3067\u3001\u9AEA\u4E0A\u3052\u3092\u30C1\u30A7\u30C3\u30AF\u3057\u3042\u3046\u3002\u9AEA\u4E0A\u3052\u30D0\u30C3\u30C1\u3057\u3067\u3059\uFF01"
+  - id: 61
+    squareKind: 1
+    nextId: 62
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5341\u4E00\u6708\u4E2D\u56DB"
+  - id: 62
+    squareKind: 0
+    nextId: 63
+    pointKind: M.P
+    points: 15
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E2D\u56DB\u98F2\u307F\u306E\u5F8C\u3001\u8CA1\u5E03\u3092\u62FE\u3063\u3066\u8B66\u5BDF\u306B\u3002\u304A\u793C\u306B\u4E00\u90E8\u3082\u3089\u3048\u308B\u3053\u3068\u306B\u3002"
+  - id: 63
+    squareKind: 0
+    nextId: 64
+    pointKind: P.P
+    points: 25
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u8F9E\u3081\u305F\u3044\u3066\u3044\u3046\u3066\u305F\u540C\u671F\u304C\u3084\u3063\u3071\u308A\u4E00\u7DD2\u306B\u9811\u5F35\u308B\u3053\u3068\u306B\u3002\u30D5\u30A3\u30AF\u30B7\u30E7\u30F3\u66F8\u3044\u3066\u3066\u3082\u611F\u52D5\u3057\u307E\u3059\u306D\u3002"
+  - id: 64
+    squareKind: 0
+    nextId: 65
+    pointKind: M.P
+    points: -30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u8CA1\u5E03\u898B\u305F\u3089\u3001\u5927\u4F1A\u306E\u9060\u5F81\u8CBB\u3067\u30D0\u30AB\u307F\u305F\u3044\u306B\u91D1\u304C\u306A\u304F\u306A\u3063\u3066\u3044\u305F\u3002\u30D0\u30A4\u30C8\u5897\u3084\u3055\u306D\u3070\u3001\u3001\u3001"
+  - id: 65
+    squareKind: 0
+    nextId: 66
+    pointKind: M.P
+    points: 5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u540C\u671F\u3067\u96C6\u307E\u3063\u3066\u8AB0\u304C\u8AB0\u3068\u7D44\u307F\u305F\u3044\u304B\u767A\u8868\u3002\u3053\u306E\u6642\u671F\u3057\u3093\u3069\u3044\u3084\u3064\u3084\u3002"
+  - id: 66
+    squareKind: 0
+    nextId: 67
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u51AC\u5168\u524D\u306E\u5148\u8F29\u65B9\u3067\u3001\u7A7A\u6C17\u304C\u3074\u308A\u3064\u3044\u3066\u3044\u306A\u304C\u3089\u3082\u3001\u81EA\u5206\u305F\u3061\u3082\u6700\u5F8C\u306E\u30B7\u30E3\u30C9\u30FC\u6226\u306B\u5411\u3051\u3066\u7DF4\u7FD2\u3059\u308B\u3002"
+  - id: 67
+    squareKind: 0
+    nextId: 68
+    pointKind: L.L
+    points: -10
+    lankKind: L.L
+    lankPoints: -1
+    warpId: 0
+    eventText: "\u610F\u4E2D\u306E\u76F8\u624B\u306B\u6025\u306B\u964D\u3089\u308C\u308B\uFF01\uFF01\uFF01\u3069\u3093\u307E\u3044\u3001\u3057\u3052\u3007\u3057\uFF01\uFF01\u305D\u308C\u3092\u7CE7\u306B\u5F37\u306A\u308B\u3093\u3084\uFF01"
+  - id: 68
+    squareKind: 0
+    nextId: 69
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30B7\u30E3\u30C9\u30FC\u6226\u3001\u81EA\u5206\u306A\u308A\u306B\u3044\u3044\u7D50\u679C\u304C\u51FA\u308B\u3002\u5C11\u3057\u306F\u5C02\u653B\u3067\u6709\u5229\u306B\u50BE\u304F\u306E\u3067\u306F\u3001\u3001\u3001"
+  - id: 69
+    squareKind: 0
+    nextId: 70
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E00\u767A\u82B8\u306E\u30CD\u30BF\u3092\u307F\u3093\u306A\u3067\u96C6\u307E\u3063\u3066\u8003\u3048\u308B\u3002\u4E00\u65E5\u76EE\u3001\u4F55\u3082\u305B\u305A\u7D42\u4E86\u3002"
+  - id: 70
+    squareKind: 0
+    nextId: 71
+    pointKind: D.P
+    points: 30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u521D\u3081\u3066\u30D5\u30A3\u30CA\u30FC\u30EC\u3092\u307F\u3066\u5927\u53F7\u6CE3\u3002\u6700\u5F8C\u307E\u3067\u3084\u308A\u5207\u308A\u3001\u7DF4\u7FD2\u3092\u9811\u5F35\u308D\u3046\u3068\u601D\u3046\u3002"
+  - id: 71
+    squareKind: 0
+    nextId: 72
+    pointKind: 
+    points: 
+    lankKind: L.L
+    lankPoints: 1
+    warpId: 0
+    eventText: "\u30AF\u30EA\u30B9\u30DE\u30B9\u306B\u30C7\u30FC\u30C8\u306B\u884C\u304F\u3084\u3064\u304C\u3044\u305F\u3093\u3067\u3059\u3088\uFF5E\u3002\u306A\u30FC\u30FC\u306B\u3043\uFF01\uFF1F\u306F\u3044\u306F\u3044\u3001\u30EA\u30A2\u5145\u30EA\u30A2\u5145\u3002\u3010\u30EA\u30A2\u5145\u30E9\u30F3\u30AF+1\u3011"
+  - id: 72
+    squareKind: 0
+    nextId: 73
+    pointKind: D.P
+    points: -30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4ECA\u5E74\u6700\u5F8C\u306E\u30DB\u30FC\u30EB\u3060\u304C\u3001\u30B2\u30FC\u30E0\u3092\u3057\u3066\u3066\u3001\u6C17\u304C\u4ED8\u3051\u3070\u884C\u3051\u306A\u3044\u3053\u3068\u306B\u3002\u6700\u5F8C\u306E\u30A2\u30D4\u30FC\u30EB\u30C1\u30E3\u30F3\u30B9\u304C\u3041\u3042"
+  - id: 73
+    squareKind: 0
+    nextId: 74
+    pointKind: P.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5927\u6666\u65E5\u3001\u56FA\u5B9A\u306E\u767A\u8868\u3092\u540C\u671F\u3068\u4E00\u7DD2\u306B\u898B\u308B\u3002\u6C7A\u307E\u3063\u305F\u3053\u3068\u3060\u3057\u3001\u76F8\u624B\u306B\u3088\u308D\u3057\u304F\u3068\u9023\u7D61\u3002\u3042\u3051\u304A\u3081\u30FC\u3002"
+  - id: 74
+    squareKind: 0
+    nextId: 75
+    pointKind: M.P
+    points: 50
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u304A\u5E74\u7389\u30B2\u30FC\u30FC\u30C3\u30C8\u3002\u305F\u307E\u306B\u306F\u5B9F\u5BB6\u306B\u5E30\u308B\u3082\u3093\u3084\u3067\u3002"
+  - id: 75
+    squareKind: 0
+    nextId: 76
+    pointKind: L.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5973\u306E\u5B50\u3068\u521D\u8A63\u3067\u9262\u5408\u308F\u305B\u3066\u4E00\u7DD2\u306B\u3001\u9858\u639B\u3051\uFF5E\u3002"
+  - id: 76
+    squareKind: 0
+    nextId: 77
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30B9\u30BF\u30B8\u30AA\u898B\u5B66\u884C\u3063\u3066\u307F\u308B\u3002\u4ED6\u306B\u3082\u884C\u304F\u3084\u3067\u30FC\u3002"
+  - id: 77
+    squareKind: 0
+    nextId: 78
+    pointKind: D.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u96EA\u30AC\u30F3\u30AC\u30F3\u964D\u3063\u3066\u3066\u30B9\u30BF\u30B8\u30AA\u898B\u5B66\u306B\u884C\u304F\u4E88\u5B9A\u304C\u65AD\u5FF5\u3002"
+  - id: 78
+    squareKind: 0
+    nextId: 79
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30B9\u30BF\u30B8\u30AA\u884C\u304F\u5834\u6240\u3092\u6C7A\u5B9A\uFF01\u3053\u308C\u304B\u3089\u3082\u9811\u5F35\u308B\u305E\u30FC\uFF01"
+  - id: 79
+    squareKind: 0
+    nextId: 80
+    pointKind: P.P
+    points: -30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30B9\u30BF\u30B8\u30AA\u9078\u3076\u524D\u306B\u3001\u540C\u671F\u304C\u4E00\u4EBA\u8F9E\u3081\u3066\u3057\u307E\u3046\u3002\u307E\u3042\u3053\u308C\u304B\u3089\u3082\u4EF2\u826F\u304F\u3057\u305F\u3044\u3067\u3059\u306A\u3002"
+  - id: 80
+    squareKind: 0
+    nextId: 81
+    pointKind: P.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u540C\u56DE\u3067\u65B0\u5E74\u4F1A\u3057\u305F\u3084\u3067\u3002\u4ECA\u5E74\u3082\u307F\u3093\u306A\u3088\u308D\u3057\u3053\u3002"
+  - id: 81
+    squareKind: 0
+    nextId: 82
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30B9\u30BF\u30B8\u30AA\u7DF4\u7FD2\u521D\u3081\u3066\u884C\u304F\u3002\u6700\u521D\u306B\u4F55\u3092\u7FD2\u3044\u307E\u3057\u3087\u3046\u304B\uFF01"
+  - id: 82
+    squareKind: 0
+    nextId: 83
+    pointKind: D.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30C0\u30F3\u30B9\u3082\u3057\u305F\u3044\u3051\u3069\u3001\u30C6\u30B9\u30C8\u3084\u3070\u3044\u3093\u3067\u3068\u308A\u3042\u3048\u305A\u3001\u5FB9\u591C\u3067\u9811\u5F35\u308B\u3093\u3067\u304A\u4F11\u307F\u9858\u3044\u307E\u3059\u3002"
+  - id: 83
+    squareKind: 0
+    nextId: 84
+    pointKind: M.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30C1\u30E3\u30EA\u306A\u304F\u3057\u305F\u3001\u6700\u60AA\u3002\u96A3\u306B\u9375\u304C\u3076\u3063\u58CA\u308C\u305F\u30C1\u30E3\u30EA\u304C\u3042\u3063\u305F\u3002\u2026\u3061\u3087\u3063\u3068\u304A\u501F\u308A\u3057\u3084\u30FC\u3059\u266A"
+  - id: 84
+    squareKind: 0
+    nextId: 85
+    pointKind: M.P
+    points: -30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30C1\u30E3\u30EA\u30D1\u30AF\u3089\u308C\u305F\u3001\u3001\u3001\u9375\u3076\u3063\u58CA\u3057\u3066\u304B\u3089\u3001\u9375\u76F4\u3057\u3066\u306A\u304B\u3063\u305F\u3051\u3069\u3055\u3001\u3001\u3001\u6BBA\u3059\u3002"
+  - id: 85
+    squareKind: 0
+    nextId: 86
+    pointKind: D.P,P.P
+    points: -20,-20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30EC\u30C3\u30B9\u30F35\u5206\u524D\u306B\u5230\u7740\u3002\u4E8B\u524D\u306B\u7DF4\u7FD2\u3057\u3066\u3044\u306A\u3044\u306E\u3067\u3001\u4F53\u3082\u4E0A\u624B\u304F\u52D5\u304B\u306A\u3044\u3002\u5148\u751F\u306B\u3082\u6CE8\u610F\u3092\u53D7\u3051\u308B\u3002"
+  - id: 86
+    squareKind: 0
+    nextId: 87
+    pointKind: D.P,P.P
+    points: 10,10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u540C\u56DE\u3067\u98F2\u3093\u3067\u3066\u71B1\u3044\u8A71\u306B\u3002\u9811\u5F35\u308D\u3046\u3068\u601D\u3046\u3002"
+  - id: 87
+    squareKind: 0
+    nextId: 88
+    pointKind: L.P
+    points: -30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u306F\uFF1F\u30D0\u30EC\u30F3\u30BF\u30A4\u30F3\uFF1F\uFF1F\u6B7B\u306D\u3070\u3044\u3044\u3068\u601D\u3044\u307E\u3059\u3002"
+  - id: 88
+    squareKind: 0
+    nextId: 89
+    pointKind: D.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30D1\u30FC\u30C8\u30CA\u30FC\u3068\u6298\u308A\u5408\u3044\u304C\u3064\u304B\u306A\u3044\u3002\u7DF4\u7FD2\u3046\u307E\u304F\u9032\u307E\u306A\u3044\u30FC"
+  - id: 89
+    squareKind: 0
+    nextId: 90
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E45\u3005\u306B\u5B66\u79D1\u98F2\u307F\u306B\u884C\u304F\u3002\u307F\u3093\u306A\u30A6\u30A7\u30A4\u3067\u3061\u3073\u308A\u305D\u3046\u3002\u3066\u304B\u3001\u676F\u307E\u3060\u7A7A\u3044\u3066\u306A\u3044\u306E\u306B\u3001\u6B21\u3005\u6CE8\u304C\u306A\u3044\u3067\u304F\u3060\u3055\u3044\u3001\u3001\u3001"
+  - id: 90
+    squareKind: 0
+    nextId: 91
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u540C\u671F\u306E\u8A95\u751F\u65E5\u3092\u795D\u3046\u3002\u3051\u3069\u9014\u4E2D\u304B\u3089\u8A18\u61B6\u6709\u308A\u307E\u305B\u3093\u3002"
+  - id: 91
+    squareKind: 0
+    nextId: 92
+    pointKind: D.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30EB\u30FC\u30C6\u30A3\u30F3\u899A\u3048\u3066\u3001\u30DB\u30FC\u30EB\u3067\u7DF4\u7FD2\u3059\u308B\u306E\u697D\u3057\u3059\u304E\u3002"
+  - id: 92
+    squareKind: 0
+    nextId: 93
+    pointKind: M.P,P.P
+    points: 30,15
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u6025\u907D\u4EE3\u308F\u308A\u306B\u30EA\u30DC\u30F3\u983C\u307E\u308C\u3066\u3001\u884C\u304F\u3053\u3068\u306B\u306A\u308B\u3002"
+  - id: 93
+    squareKind: 0
+    nextId: 94
+    pointKind: L.P,P.P
+    points: 30,-20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5C45\u9152\u5C4B\u30C7\u30FC\u30C8\u3002\u9014\u4E2D\u3067\u540C\u671F\u3068\u306F\u3061\u4F1A\u3044\u6700\u5F8C\u306E\u4E00\u6B69\u304C\u8E0F\u307F\u51FA\u305B\u306A\u304B\u3063\u305F\u3002"
+  - id: 94
+    squareKind: 0
+    nextId: 95
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u4E09\u6708\u4E2D\u56DB\u3001\u601D\u3063\u305F\u3088\u308A\u6210\u7E3E\u826F\u304B\u3063\u305F\u3002\u6B21\u306F\u30EC\u30AE\u30E5\u30E9\u30FC\u76EE\u6307\u3059\u3093\u3084\uFF01"
+  - id: 95
+    squareKind: 0
+    nextId: 96
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5148\u8F29\u306E\u5352\u696D\u5F0F\u3002\u3059\u3054\u3044\u5BC2\u3057\u3044\u306F\u305A\u3084\u306E\u306B\u3001\u306A\u305C\u304B\u6D99\u306F\u51FA\u306A\u3044\u3002\u305D\u3063\u304B\u3001\u307B\u3068\u3093\u3069\u307E\u3060\u304A\u308B\u304B\u3089\u304B\u3002"
+  - id: 96
+    squareKind: 0
+    nextId: 97
+    pointKind: M.P
+    points: -10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u30A2\u30EB\u30D0\u30A4\u30C8\u3081\u3063\u3061\u3083\u9811\u5F35\u3063\u305F\uFF01\u3081\u3063\u3061\u3083\u7A3C\u3044\u3060\u30D5\u30FC\u30FC\u30FC\uFF01\u305D\u3057\u3066\u3001\u307B\u3068\u3093\u3069\u65B0\u52E7\u8CBB\u306B\u6D88\u3048\u3066\u3080\u3057\u308D\u30DE\u30A4\u30CA\u30B9\u3001\u3001"
+  - id: 97
+    squareKind: 0
+    nextId: 98
+    pointKind: D.P
+    points: 20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u65B0\u52E7\u524D\u306B\u6700\u5F8C\u306E\u7DF4\u7FD2\u3002\u3084\u308A\u5207\u308A\u307E\u3057\u305F\u3088\u30FC\u3002\u5F8C\u8F29\u306E\u524D\u3067\u3048\u3048\u59FF\u898B\u305B\u305F\u3093\u3067\uFF01"
+  - id: 98
+    squareKind: 0
+    nextId: 99
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u521D\u3081\u3066\u5F8C\u8F29\u3067\u304D\u308B\u3068\u306E\u3053\u3068\u3067\u3044\u3063\u3071\u3044\u30B3\u30FC\u30EB\u306E\u7DF4\u7FD2\u3057\u307E\u304F\u308B\u3084\u3067\u3044\u3002"
+  - id: 99
+    squareKind: 0
+    nextId: 100
+    pointKind: D.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u3055\u307C\u3063\u3066\u308B\u8A33\u3084\u306A\u3044\u306D\u3093\u3002\u7559\u5E74\u3092\u907F\u3051\u308B\u305F\u3081\u306B\u3001\u4ECA\u65E5\u306F\u3068\u308A\u3042\u3048\u305A\u52C9\u5F37\u3057\u307E\u3059\uFF01"
+  - id: 100
+    squareKind: 0
+    nextId: 101
+    pointKind: D.P,M.P
+    points: 10,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 501
+    eventText: "\u7559\u5E74\u3002\u304A\u524D\u4E00\u56DE\u751F\u304B\u3089\u3001\u3084\u3063\u3066\u307E\u3046\u3068\u304B\u30E4\u30F3\u30AD\u30FC\u304B\u3088\u3002"
+  - id: 101
+    squareKind: 0
+    nextId: 102
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 102
+    squareKind: 0
+    nextId: 103
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 103
+    squareKind: 0
+    nextId: 104
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 104
+    squareKind: 0
+    nextId: 105
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 105
+    squareKind: 0
+    nextId: 106
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 106
+    squareKind: 0
+    nextId: 107
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 107
+    squareKind: 0
+    nextId: 108
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 108
+    squareKind: 0
+    nextId: 109
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 109
+    squareKind: 0
+    nextId: 110
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 110
+    squareKind: 1
+    nextId: 111
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 111
+    squareKind: 0
+    nextId: 112
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 112
+    squareKind: 0
+    nextId: 113
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 113
+    squareKind: 0
+    nextId: 114
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 114
+    squareKind: 0
+    nextId: 115
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 115
+    squareKind: 0
+    nextId: 116
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 116
+    squareKind: 0
+    nextId: 117
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 117
+    squareKind: 0
+    nextId: 118
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 118
+    squareKind: 0
+    nextId: 119
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 119
+    squareKind: 0
+    nextId: 120
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 120
+    squareKind: 0
+    nextId: 121
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 121
+    squareKind: 0
+    nextId: 122
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 122
+    squareKind: 0
+    nextId: 123
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 123
+    squareKind: 0
+    nextId: 124
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 124
+    squareKind: 0
+    nextId: 125
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 125
+    squareKind: 0
+    nextId: 126
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 126
+    squareKind: 0
+    nextId: 127
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 127
+    squareKind: 0
+    nextId: 128
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 128
+    squareKind: 0
+    nextId: 129
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 129
+    squareKind: 0
+    nextId: 130
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 130
+    squareKind: 0
+    nextId: 131
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 131
+    squareKind: 0
+    nextId: 132
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 132
+    squareKind: 0
+    nextId: 133
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 133
+    squareKind: 0
+    nextId: 134
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 134
+    squareKind: 0
+    nextId: 135
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 135
+    squareKind: 0
+    nextId: 136
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 136
+    squareKind: 0
+    nextId: 137
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 137
+    squareKind: 0
+    nextId: 138
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 138
+    squareKind: 0
+    nextId: 139
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 139
+    squareKind: 0
+    nextId: 140
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 140
+    squareKind: 0
+    nextId: 141
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 141
+    squareKind: 0
+    nextId: 142
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 142
+    squareKind: 0
+    nextId: 143
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 143
+    squareKind: 0
+    nextId: 144
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 144
+    squareKind: 0
+    nextId: 145
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 145
+    squareKind: 0
+    nextId: 146
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 146
+    squareKind: 0
+    nextId: 147
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 147
+    squareKind: 0
+    nextId: 148
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 148
+    squareKind: 0
+    nextId: 149
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 149
+    squareKind: 0
+    nextId: 150
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 150
+    squareKind: 0
+    nextId: 151
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 151
+    squareKind: 0
+    nextId: 152
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 152
+    squareKind: 0
+    nextId: 153
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 153
+    squareKind: 0
+    nextId: 154
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 154
+    squareKind: 0
+    nextId: 155
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 155
+    squareKind: 0
+    nextId: 156
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 156
+    squareKind: 0
+    nextId: 157
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 157
+    squareKind: 0
+    nextId: 158
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 158
+    squareKind: 0
+    nextId: 159
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 159
+    squareKind: 0
+    nextId: 160
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 160
+    squareKind: 0
+    nextId: 161
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 161
+    squareKind: 1
+    nextId: 162
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 162
+    squareKind: 0
+    nextId: 163
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 163
+    squareKind: 0
+    nextId: 164
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 164
+    squareKind: 0
+    nextId: 165
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 165
+    squareKind: 0
+    nextId: 166
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 166
+    squareKind: 0
+    nextId: 167
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 167
+    squareKind: 0
+    nextId: 168
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 168
+    squareKind: 0
+    nextId: 169
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 169
+    squareKind: 0
+    nextId: 170
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 170
+    squareKind: 0
+    nextId: 171
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 171
+    squareKind: 0
+    nextId: 172
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 172
+    squareKind: 0
+    nextId: 173
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 173
+    squareKind: 0
+    nextId: 174
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 174
+    squareKind: 0
+    nextId: 175
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 175
+    squareKind: 0
+    nextId: 176
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 176
+    squareKind: 0
+    nextId: 177
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 177
+    squareKind: 0
+    nextId: 178
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 178
+    squareKind: 0
+    nextId: 179
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 179
+    squareKind: 0
+    nextId: 180
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 180
+    squareKind: 0
+    nextId: 181
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 181
+    squareKind: 0
+    nextId: 182
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 182
+    squareKind: 0
+    nextId: 183
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 183
+    squareKind: 0
+    nextId: 184
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 184
+    squareKind: 0
+    nextId: 185
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 185
+    squareKind: 0
+    nextId: 186
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 186
+    squareKind: 0
+    nextId: 187
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 187
+    squareKind: 0
+    nextId: 188
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 188
+    squareKind: 0
+    nextId: 189
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 189
+    squareKind: 0
+    nextId: 190
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 190
+    squareKind: 0
+    nextId: 191
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 191
+    squareKind: 0
+    nextId: 192
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 192
+    squareKind: 0
+    nextId: 193
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 193
+    squareKind: 0
+    nextId: 194
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 194
+    squareKind: 0
+    nextId: 195
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 195
+    squareKind: 0
+    nextId: 196
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 196
+    squareKind: 0
+    nextId: 197
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 197
+    squareKind: 0
+    nextId: 198
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 198
+    squareKind: 0
+    nextId: 199
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 199
+    squareKind: 0
+    nextId: 200
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 601
+    eventText: 
+  - id: 200
+    squareKind: 0
+    nextId: 201
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 601
+    eventText: 
+  - id: 201
+    squareKind: 0
+    nextId: 202
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 202
+    squareKind: 0
+    nextId: 203
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 203
+    squareKind: 0
+    nextId: 204
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 204
+    squareKind: 0
+    nextId: 205
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 205
+    squareKind: 0
+    nextId: 206
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 206
+    squareKind: 0
+    nextId: 207
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 207
+    squareKind: 0
+    nextId: 208
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 208
+    squareKind: 0
+    nextId: 209
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 209
+    squareKind: 0
+    nextId: 210
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 210
+    squareKind: 1
+    nextId: 211
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 211
+    squareKind: 0
+    nextId: 212
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 212
+    squareKind: 0
+    nextId: 213
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 213
+    squareKind: 0
+    nextId: 214
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 214
+    squareKind: 0
+    nextId: 215
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 215
+    squareKind: 0
+    nextId: 216
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 216
+    squareKind: 0
+    nextId: 217
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 217
+    squareKind: 0
+    nextId: 218
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 218
+    squareKind: 0
+    nextId: 219
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 219
+    squareKind: 0
+    nextId: 220
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 220
+    squareKind: 0
+    nextId: 221
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 221
+    squareKind: 0
+    nextId: 222
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 222
+    squareKind: 0
+    nextId: 223
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 223
+    squareKind: 0
+    nextId: 224
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 224
+    squareKind: 0
+    nextId: 225
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 225
+    squareKind: 0
+    nextId: 226
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 226
+    squareKind: 0
+    nextId: 227
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 227
+    squareKind: 0
+    nextId: 228
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 228
+    squareKind: 0
+    nextId: 229
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 229
+    squareKind: 0
+    nextId: 230
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 230
+    squareKind: 0
+    nextId: 231
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 231
+    squareKind: 0
+    nextId: 232
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 232
+    squareKind: 0
+    nextId: 233
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 233
+    squareKind: 0
+    nextId: 234
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 234
+    squareKind: 0
+    nextId: 235
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 235
+    squareKind: 0
+    nextId: 236
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 236
+    squareKind: 0
+    nextId: 237
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 237
+    squareKind: 0
+    nextId: 238
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 950
+    eventText: 
+  - id: 238
+    squareKind: 0
+    nextId: 239
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 950
+    eventText: 
+  - id: 239
+    squareKind: 0
+    nextId: 240
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 950
+    eventText: 
+  - id: 240
+    squareKind: 0
+    nextId: 241
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 241
+    squareKind: 0
+    nextId: 242
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 242
+    squareKind: 0
+    nextId: 243
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 243
+    squareKind: 0
+    nextId: 244
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 244
+    squareKind: 0
+    nextId: 245
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 245
+    squareKind: 0
+    nextId: 246
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 246
+    squareKind: 0
+    nextId: 247
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 247
+    squareKind: 0
+    nextId: 248
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 248
+    squareKind: 0
+    nextId: 249
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 249
+    squareKind: 0
+    nextId: 250
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 250
+    squareKind: 0
+    nextId: 251
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 251
+    squareKind: 0
+    nextId: 252
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 252
+    squareKind: 0
+    nextId: 253
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 253
+    squareKind: 0
+    nextId: 254
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 254
+    squareKind: 0
+    nextId: 255
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 255
+    squareKind: 0
+    nextId: 256
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 256
+    squareKind: 0
+    nextId: 257
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 257
+    squareKind: 0
+    nextId: 258
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 258
+    squareKind: 0
+    nextId: 259
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 259
+    squareKind: 0
+    nextId: 260
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 260
+    squareKind: 0
+    nextId: 261
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 261
+    squareKind: 1
+    nextId: 262
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 262
+    squareKind: 0
+    nextId: 263
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 263
+    squareKind: 0
+    nextId: 264
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 264
+    squareKind: 0
+    nextId: 265
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 265
+    squareKind: 0
+    nextId: 266
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 266
+    squareKind: 0
+    nextId: 267
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 267
+    squareKind: 0
+    nextId: 268
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 268
+    squareKind: 0
+    nextId: 269
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 269
+    squareKind: 0
+    nextId: 270
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 270
+    squareKind: 0
+    nextId: 271
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 271
+    squareKind: 0
+    nextId: 272
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 272
+    squareKind: 0
+    nextId: 273
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 273
+    squareKind: 0
+    nextId: 274
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 274
+    squareKind: 0
+    nextId: 275
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 275
+    squareKind: 0
+    nextId: 276
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 276
+    squareKind: 0
+    nextId: 277
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 277
+    squareKind: 0
+    nextId: 278
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 278
+    squareKind: 0
+    nextId: 279
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 279
+    squareKind: 0
+    nextId: 280
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 280
+    squareKind: 0
+    nextId: 281
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 281
+    squareKind: 0
+    nextId: 282
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 282
+    squareKind: 0
+    nextId: 283
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 283
+    squareKind: 0
+    nextId: 284
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 284
+    squareKind: 0
+    nextId: 285
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 285
+    squareKind: 0
+    nextId: 286
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 286
+    squareKind: 0
+    nextId: 287
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 287
+    squareKind: 0
+    nextId: 288
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 288
+    squareKind: 0
+    nextId: 289
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 289
+    squareKind: 0
+    nextId: 290
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 290
+    squareKind: 0
+    nextId: 291
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 291
+    squareKind: 0
+    nextId: 292
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 292
+    squareKind: 0
+    nextId: 293
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 293
+    squareKind: 0
+    nextId: 294
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 294
+    squareKind: 0
+    nextId: 295
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 295
+    squareKind: 0
+    nextId: 296
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 296
+    squareKind: 0
+    nextId: 297
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 297
+    squareKind: 0
+    nextId: 298
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 298
+    squareKind: 0
+    nextId: 299
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 701
+    eventText: 
+  - id: 299
+    squareKind: 0
+    nextId: 300
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 701
+    eventText: 
+  - id: 300
+    squareKind: 0
+    nextId: 301
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 701
+    eventText: 
+  - id: 301
+    squareKind: 0
+    nextId: 302
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 302
+    squareKind: 0
+    nextId: 303
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 303
+    squareKind: 0
+    nextId: 304
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 304
+    squareKind: 0
+    nextId: 305
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 305
+    squareKind: 0
+    nextId: 306
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 306
+    squareKind: 0
+    nextId: 307
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 307
+    squareKind: 0
+    nextId: 308
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 308
+    squareKind: 0
+    nextId: 309
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 309
+    squareKind: 0
+    nextId: 310
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 310
+    squareKind: 1
+    nextId: 311
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 311
+    squareKind: 0
+    nextId: 312
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 312
+    squareKind: 0
+    nextId: 313
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 313
+    squareKind: 0
+    nextId: 314
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 314
+    squareKind: 0
+    nextId: 315
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 315
+    squareKind: 0
+    nextId: 316
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 316
+    squareKind: 0
+    nextId: 317
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 317
+    squareKind: 0
+    nextId: 318
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 318
+    squareKind: 0
+    nextId: 319
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 319
+    squareKind: 0
+    nextId: 320
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 320
+    squareKind: 0
+    nextId: 321
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 321
+    squareKind: 0
+    nextId: 322
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 322
+    squareKind: 0
+    nextId: 323
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 323
+    squareKind: 0
+    nextId: 324
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 324
+    squareKind: 0
+    nextId: 325
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 325
+    squareKind: 1
+    nextId: 326
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 326
+    squareKind: 0
+    nextId: 327
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 327
+    squareKind: 0
+    nextId: 328
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 328
+    squareKind: 0
+    nextId: 329
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 329
+    squareKind: 0
+    nextId: 330
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 330
+    squareKind: 0
+    nextId: 331
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 331
+    squareKind: 0
+    nextId: 332
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 332
+    squareKind: 0
+    nextId: 333
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 333
+    squareKind: 0
+    nextId: 334
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 334
+    squareKind: 0
+    nextId: 335
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 335
+    squareKind: 0
+    nextId: 336
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 336
+    squareKind: 0
+    nextId: 337
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 337
+    squareKind: 0
+    nextId: 338
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 338
+    squareKind: 0
+    nextId: 339
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 339
+    squareKind: 0
+    nextId: 340
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 340
+    squareKind: 0
+    nextId: 341
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 341
+    squareKind: 0
+    nextId: 342
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 342
+    squareKind: 0
+    nextId: 343
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 343
+    squareKind: 0
+    nextId: 344
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 344
+    squareKind: 0
+    nextId: 345
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 345
+    squareKind: 0
+    nextId: 346
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 346
+    squareKind: 0
+    nextId: 347
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 347
+    squareKind: 0
+    nextId: 348
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 348
+    squareKind: 0
+    nextId: 349
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 349
+    squareKind: 0
+    nextId: 350
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 350
+    squareKind: 0
+    nextId: 351
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 351
+    squareKind: 0
+    nextId: 352
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 352
+    squareKind: 0
+    nextId: 353
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 353
+    squareKind: 0
+    nextId: 354
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 354
+    squareKind: 0
+    nextId: 355
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 355
+    squareKind: 0
+    nextId: 356
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 356
+    squareKind: 0
+    nextId: 357
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 357
+    squareKind: 0
+    nextId: 358
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 358
+    squareKind: 0
+    nextId: 359
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 359
+    squareKind: 0
+    nextId: 360
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 360
+    squareKind: 0
+    nextId: 361
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 361
+    squareKind: 1
+    nextId: 362
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 362
+    squareKind: 0
+    nextId: 363
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 363
+    squareKind: 0
+    nextId: 364
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 364
+    squareKind: 0
+    nextId: 365
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 365
+    squareKind: 0
+    nextId: 366
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 366
+    squareKind: 1
+    nextId: 367
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 367
+    squareKind: 0
+    nextId: 368
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 368
+    squareKind: 0
+    nextId: 369
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 369
+    squareKind: 0
+    nextId: 370
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 370
+    squareKind: 0
+    nextId: 371
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 371
+    squareKind: 0
+    nextId: 372
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 372
+    squareKind: 0
+    nextId: 373
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 373
+    squareKind: 0
+    nextId: 374
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 374
+    squareKind: 0
+    nextId: 375
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 375
+    squareKind: 0
+    nextId: 376
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 376
+    squareKind: 0
+    nextId: 377
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 377
+    squareKind: 0
+    nextId: 378
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 378
+    squareKind: 0
+    nextId: 379
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 379
+    squareKind: 0
+    nextId: 380
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 380
+    squareKind: 0
+    nextId: 381
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 801
+    eventText: 
+  - id: 381
+    squareKind: 0
+    nextId: 382
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 801
+    eventText: 
+  - id: 382
+    squareKind: 0
+    nextId: 383
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 801
+    eventText: 
+  - id: 383
+    squareKind: 0
+    nextId: 384
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 801
+    eventText: 
+  - id: 384
+    squareKind: 0
+    nextId: 385
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 385
+    squareKind: 0
+    nextId: 386
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 386
+    squareKind: 0
+    nextId: 387
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 387
+    squareKind: 0
+    nextId: 388
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 388
+    squareKind: 0
+    nextId: 389
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 389
+    squareKind: 0
+    nextId: 390
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 390
+    squareKind: 0
+    nextId: 391
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 391
+    squareKind: 0
+    nextId: 392
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 392
+    squareKind: 0
+    nextId: 393
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 393
+    squareKind: 0
+    nextId: 394
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 394
+    squareKind: 0
+    nextId: 395
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 395
+    squareKind: 0
+    nextId: 396
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 396
+    squareKind: 0
+    nextId: 397
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 397
+    squareKind: 0
+    nextId: 398
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 398
+    squareKind: 0
+    nextId: 399
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 399
+    squareKind: 0
+    nextId: 400
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 400
+    squareKind: 0
+    nextId: 401
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 401
+    squareKind: 0
+    nextId: 0
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u5352\u696D"
+  - id: 501
+    squareKind: 0
+    nextId: 502
+    pointKind: M.P
+    points: -30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u7559\u5E74\u3067\u89AA\u30D6\u30C1\u30AE\u30EC\u3002\u4ED5\u9001\u308A\u6D88\u3048\u308B\u3002"
+  - id: 502
+    squareKind: 0
+    nextId: 503
+    pointKind: D.P
+    points: -30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u7559\u5E74\u3057\u3066\u30C0\u30F3\u30B9\u3059\u308B\u306A\u3068\u89AA\u306B\u8A00\u308F\u308C\u305F\u3001\u3001"
+  - id: 503
+    squareKind: 0
+    nextId: 504
+    pointKind: P.P
+    points: 10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u7559\u5E74\u3057\u305F\u3063\u3066\u3044\u3044\u3058\u3083\u306A\u3044\u3002\u4EBA\u9593\u3060\u3082\u306E\u3002"
+  - id: 504
+    squareKind: 0
+    nextId: 505
+    pointKind: D.P
+    points: 30
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u7559\u5E74\u3057\u305F\u304B\u3089\u30D0\u30A4\u30C8\u3068\u30C0\u30F3\u30B9\u7121\u9650\u306B\u3067\u304D\u308B\u3084\u3093\u3002"
+  - id: 505
+    squareKind: 0
+    nextId: 506
+    pointKind: D.P,M.P
+    points: 20,-10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u7559\u5E74\u3057\u3066\u304B\u3089\u3072\u305F\u3059\u3089\u30EC\u30C3\u30B9\u30F3\u884C\u3051\u308B\u3093\u3067\u3059\u306D\u30FC\u3002\u304A\u91D1\u306A\u3044\u3067\u3059\u304C\u3002\u3002\u3002"
+  - id: 506
+    squareKind: 0
+    nextId: 507
+    pointKind: D.P,M.P
+    points: 10,10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u3072\u305F\u3059\u3089\u30D0\u30A4\u30C8\u3068\u30C0\u30F3\u30B9\u3067\u304D\u308B\u3084\u3093\u3002\u6700\u9AD8\u3002"
+  - id: 507
+    squareKind: 0
+    nextId: 508
+    pointKind: P.P
+    points: -20
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u89AA\u306B\u6012\u3089\u308C\u3066\u3044\u308B\u3068\u3053\u308D\u3092\u540C\u671F\u306B\u3001\u898B\u3089\u308C\u308B\u6700\u60AA\u3002"
+  - id: 508
+    squareKind: 0
+    nextId: 509
+    pointKind: D.P,M.P
+    points: 10,10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u3072\u305F\u3059\u3089\u30D0\u30A4\u30C8\u3068\u30C0\u30F3\u30B9\u3067\u304D\u308B\u3084\u3093\u3002\u6700\u9AD8\u3002"
+  - id: 509
+    squareKind: 0
+    nextId: 510
+    pointKind: D.P,M.P
+    points: 10,10
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u3072\u305F\u3059\u3089\u30D0\u30A4\u30C8\u3068\u30C0\u30F3\u30B9\u3067\u304D\u308B\u3084\u3093\u3002\u6700\u9AD8\u3002"
+  - id: 510
+    squareKind: 0
+    nextId: 102
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 601
+    squareKind: 0
+    nextId: 602
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 602
+    squareKind: 0
+    nextId: 603
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 603
+    squareKind: 0
+    nextId: 604
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 604
+    squareKind: 0
+    nextId: 605
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 605
+    squareKind: 0
+    nextId: 606
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 606
+    squareKind: 0
+    nextId: 607
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 607
+    squareKind: 0
+    nextId: 608
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 608
+    squareKind: 0
+    nextId: 609
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 609
+    squareKind: 0
+    nextId: 610
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 610
+    squareKind: 0
+    nextId: 202
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 701
+    squareKind: 0
+    nextId: 702
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 702
+    squareKind: 0
+    nextId: 703
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 703
+    squareKind: 0
+    nextId: 704
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 704
+    squareKind: 0
+    nextId: 705
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 705
+    squareKind: 0
+    nextId: 706
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 706
+    squareKind: 0
+    nextId: 707
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 707
+    squareKind: 0
+    nextId: 708
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 708
+    squareKind: 0
+    nextId: 709
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 709
+    squareKind: 0
+    nextId: 710
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 710
+    squareKind: 0
+    nextId: 302
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 801
+    squareKind: 0
+    nextId: 802
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 802
+    squareKind: 0
+    nextId: 803
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 803
+    squareKind: 0
+    nextId: 804
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 804
+    squareKind: 0
+    nextId: 805
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 805
+    squareKind: 0
+    nextId: 806
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 806
+    squareKind: 0
+    nextId: 807
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 807
+    squareKind: 0
+    nextId: 808
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 808
+    squareKind: 0
+    nextId: 809
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 809
+    squareKind: 0
+    nextId: 810
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 810
+    squareKind: 0
+    nextId: 385
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 901
+    squareKind: 0
+    nextId: 902
+    pointKind: D.P,P.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u540C\u671F\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 902
+    squareKind: 0
+    nextId: 903
+    pointKind: D.P,L.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u5973\u6027\u9663\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 903
+    squareKind: 0
+    nextId: 904
+    pointKind: D.P,P.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u540C\u671F\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 904
+    squareKind: 0
+    nextId: 905
+    pointKind: D.P,L.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u5973\u6027\u9663\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 905
+    squareKind: 0
+    nextId: 906
+    pointKind: D.P,P.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u540C\u671F\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 906
+    squareKind: 0
+    nextId: 907
+    pointKind: D.P,L.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u5973\u6027\u9663\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 907
+    squareKind: 0
+    nextId: 908
+    pointKind: D.P,P.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u540C\u671F\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 908
+    squareKind: 0
+    nextId: 909
+    pointKind: D.P,L.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u5973\u6027\u9663\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 909
+    squareKind: 0
+    nextId: 910
+    pointKind: D.P,P.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u540C\u671F\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 910
+    squareKind: 0
+    nextId: 41
+    pointKind: D.P,L.P
+    points: 10,-5
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: "\u307E\u3060\u307E\u3060\u7D42\u308F\u3089\u306A\u3044\u5973\u6027\u9663\u30A4\u30E9\u30A4\u30E9\u2026"
+  - id: 950
+    squareKind: 0
+    nextId: 951
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 951
+    squareKind: 0
+    nextId: 952
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 952
+    squareKind: 0
+    nextId: 953
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 953
+    squareKind: 0
+    nextId: 954
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 954
+    squareKind: 0
+    nextId: 955
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 955
+    squareKind: 0
+    nextId: 956
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 956
+    squareKind: 0
+    nextId: 957
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 957
+    squareKind: 0
+    nextId: 958
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 958
+    squareKind: 0
+    nextId: 959
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 959
+    squareKind: 0
+    nextId: 960
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 
+  - id: 960
+    squareKind: 0
+    nextId: 241
+    pointKind: 
+    points: 
+    lankKind: 
+    lankPoints: 0
+    warpId: 0
+    eventText: 

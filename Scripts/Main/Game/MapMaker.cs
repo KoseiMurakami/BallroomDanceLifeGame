@@ -26,7 +26,7 @@ public class MapMaker : MonoBehaviour
             childTransform.gameObject.AddComponent<Square>();
             Square square = childTransform.gameObject.GetComponent<Square>();
             squareList.Add(square);
-            square.SetSquareInfo(squareInfList[roopIndex].id, squareInfList[roopIndex].squareKind);
+            square.SetSquareInfo(squareInfList[roopIndex]);
             squareObjectList.Add(childTransform.gameObject);
             roopIndex++;
         }

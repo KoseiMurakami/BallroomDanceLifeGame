@@ -5,6 +5,7 @@ using LifeGame;
 
 public class Square : SquareBase
 {
+    private MstSquaresDef squaresInfo = new MstSquaresDef();
     private Vector3 nextPos;
 
     // Start is called before the first frame update
@@ -22,14 +23,12 @@ public class Square : SquareBase
     /*#======================================================================#*/
     /*#    function : SetSquareInfo  function                                #*/
     /*#    summary  : マスの情報をセットする                                 #*/
-    /*#    argument : int            index            -  マスインデックス    #*/
-    /*#               squareKindDef  kind             -  マス種別            #*/
+    /*#    argument : MstSquaresDef  data             -  マス情報            #*/
     /*#    return   : nothing                                                #*/
     /*#======================================================================#*/
-    public void SetSquareInfo(int index, squareKindDef kind)
+    public void SetSquareInfo(MstSquaresDef data)
     {
-        squareIndex = index;
-        squareKind = kind;
+        squaresInfo = data;
     }
 
     /*#======================================================================#*/
@@ -45,7 +44,7 @@ public class Square : SquareBase
     }
 
     /*#======================================================================#*/
-    /*#    function : GetNextSquarePos  function                                   #*/
+    /*#    function : GetNextSquarePos  function                             #*/
     /*#    summary  : 次のマスの位置を取得する                               #*/
     /*#    argument : nothing                                                #*/
     /*#    return   : int  nextIndex              -  次のマスインデックス    #*/
@@ -53,5 +52,16 @@ public class Square : SquareBase
     public Vector3 GetNextSquarePos()
     {
         return nextPos;
+    }
+
+    /*#======================================================================#*/
+    /*#    function : GetNextSquarePos  function                             #*/
+    /*#    summary  : 次のマスの位置を取得する                               #*/
+    /*#    argument : nothing                                                #*/
+    /*#    return   : string  eventText           -  マス停止時テキスト      #*/
+    /*#======================================================================#*/
+    public string GetEventText()
+    {
+        return squaresInfo.eventText;
     }
 }

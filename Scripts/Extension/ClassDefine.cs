@@ -4,18 +4,17 @@ using UnityEngine;
 
 namespace LifeGame
 {
-    public enum squareKindDef 
+    public enum SquareKindDef 
     {
-        Normal,
-        Abnormal,
-        SquareEnd
+        normal,
+        forced
     }
 
     public class SquareBase : MonoBehaviour
     {
 
         protected int squareIndex;
-        protected squareKindDef squareKind;
+        protected SquareKindDef squareKind;
 
         protected virtual void Start()
         {

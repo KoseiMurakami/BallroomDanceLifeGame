@@ -1,20 +1,29 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    float speed = default;
+    private float speed = default;
 
+    private GameSceneManager gameSceneManager;
     private Vector3 nextPosition;
+    private Collider squareCollider = new Collider();
     private int restEyes = 0;
     private bool WalkingFlg = false;
     private bool arrivedPosFlg = true;
 
-
     void Start()
     {
+        //自分自身が生成していないオブジェクトのコンポーネントを削除
+        if (!photonView.IsMine)
+        {
+            Destroy(this);
+        }
+
+        gameSceneManager = GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
     }
 
     void Update()
@@ -69,6 +78,12 @@ public class Player : MonoBehaviour
 
         WalkingFlg = false;
 
+        //テキストオープン、テキスト表示
+        string eventText = squareCollider.gameObject.GetComponent<Square>().GetEventText();
+        gameSceneManager.DisplayEventTextPanel(eventText);
+
+        yield return new WaitForSeconds(3);
+
         yield break;
     }
 
@@ -81,6 +96,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         arrivedPosFlg = true;
+        squareCollider = other;
         nextPosition = other.gameObject.GetComponent<Square>().GetNextSquarePos();
     }
 }

@@ -6,35 +6,13 @@ using UnityEngine.UI;
 public class SettingUI : MonoBehaviour
 {
     [SerializeField]
-    private GameObject buildRoomPanelObject = default;
+    private SettingSceneManager settingSceneManager = default;
 
     [SerializeField]
-    private SettingManager settingManager = default;
+    private RoomTableOperator roomTableOperator = default;
 
     [SerializeField]
     private InputField inputField = default;
-
-    /*#======================================================================#*/
-    /*#    function : PushBuildRoomButton  function                          #*/
-    /*#    summary  : BuildRoomButtonを押したときの処理                      #*/
-    /*#    argument : nothing                                                #*/
-    /*#    return   : nothing                                                #*/
-    /*#======================================================================#*/
-    public void PushBuildRoomButton()
-    {
-        buildRoomPanelObject.SetActive(true);
-    }
-
-    /*#======================================================================#*/
-    /*#    function : PushBackButton  function                               #*/
-    /*#    summary  : BackButtonを押したときの処理                           #*/
-    /*#    argument : nothing                                                #*/
-    /*#    return   : nothing                                                #*/
-    /*#======================================================================#*/
-    public void PushBackButton()
-    {
-        buildRoomPanelObject.SetActive(false);
-    }
 
     /*#======================================================================#*/
     /*#    function : PushEnterButton  function                              #*/
@@ -44,7 +22,31 @@ public class SettingUI : MonoBehaviour
     /*#======================================================================#*/
     public void PushEnterButton()
     {
-        settingManager.SetRoomName(inputField.text);
-        settingManager.EnterTheRoom();
+        settingSceneManager.EnterTheRoom(inputField.text);
+    }
+
+    /*#======================================================================#*/
+    /*#    function : PushEnterButtonInTable  function                       #*/
+    /*#    summary  : Table上のEnterButtonを押したときの処理                 #*/
+    /*#    argument : nothing                                                #*/
+    /*#    return   : nothing                                                #*/
+    /*#======================================================================#*/
+    public void PushEnterButtonInTable(int rowIndex, int columnIndex)
+    {
+        Debug.Log(rowIndex + "," + columnIndex + "is selected");
+
+        settingSceneManager.EnterTheRoom(roomTableOperator.GetRoomNameByCellIndex(rowIndex));
+    }
+
+    /*#======================================================================#*/
+    /*#    function : PushSeekRoomButton  function                           #*/
+    /*#    summary  : SeekRoomButtonを押したときの処理                       #*/
+    /*#    argument : nothing                                                #*/
+    /*#    return   : nothing                                                #*/
+    /*#======================================================================#*/
+    public void PushSeekRoomButton()
+    {
+        settingSceneManager.SwitchDisplayRoomTable(true);
+        roomTableOperator.InitRoomTable();
     }
 }
