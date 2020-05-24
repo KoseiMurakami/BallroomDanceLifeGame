@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,9 @@ public class SettingUI : MonoBehaviour
     [SerializeField]
     private InputField inputField = default;
 
+    [SerializeField]
+    private Text membersCount = default;
+
     /*#======================================================================#*/
     /*#    function : PushEnterButton  function                              #*/
     /*#    summary  : EnterButtonを押したときの処理                          #*/
@@ -22,7 +26,8 @@ public class SettingUI : MonoBehaviour
     /*#======================================================================#*/
     public void PushEnterButton()
     {
-        settingSceneManager.EnterTheRoom(inputField.text);
+        settingSceneManager.SettingAndEnterTheRoom("ゲストプレイヤー",
+            inputField.text, Convert.ToByte(membersCount.text));
     }
 
     /*#======================================================================#*/
@@ -35,7 +40,8 @@ public class SettingUI : MonoBehaviour
     {
         Debug.Log(rowIndex + "," + columnIndex + "is selected");
 
-        settingSceneManager.EnterTheRoom(roomTableOperator.GetRoomNameByCellIndex(rowIndex));
+        settingSceneManager.EnterTheRoom("ゲストプレイヤー",
+            roomTableOperator.GetRoomNameByCellIndex(rowIndex));
     }
 
     /*#======================================================================#*/

@@ -14,20 +14,77 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
     [SerializeField]
     GameObject eventTextPanel = default;
 
-    private GameObject playerObject;
-    private Player player;
-    private Vector3 instantiatePos;
+    [SerializeField]
+    Game_Button game_Button = default;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    MainCamera mainCamera = default;
+
+    private int activePlayerIndex = 0;
+    private int myPlayerIndex = 0;
+    private int exsistsPlayerCount;
+    private GameObject playerObject;
+    private List<GameObject> playerObjectList = new List<GameObject>();
+    private Player player;
+    private List<Player> playerList = new List<Player>();
+    private Vector3 instantiatePos;
+    private bool isCalledOnce = true;
+
+    private void Awake()
     {
+        //プレイヤー生成の起点
         instantiatePos = new Vector3(startPoint.transform.position.x,
                                      startPoint.transform.position.y,
                                      startPoint.transform.position.z);
 
-        playerObject = PhotonNetwork.Instantiate("Prefabs/NetworkObjects/GamePlayer", instantiatePos, Quaternion.identity);
-        player = playerObject.GetComponent<Player>();
+        //プレイヤー生成
+        playerObject = PhotonNetwork.Instantiate("Prefabs/NetworkObjects/GamePlayer",
+                                                 instantiatePos,
+                                                 Quaternion.identity);
+
+        player = playerObject.AddComponent<Player>();
+        playerObject.name = PhotonNetwork.LocalPlayer.UserId;
         PhotonNetwork.IsMessageQueueRunning = true;
+        exsistsPlayerCount = PhotonNetwork.CurrentRoom.PlayerCount;
+    }
+
+    private void Start()
+    {
+        for (int i = 1; i <= exsistsPlayerCount; i++)
+        {
+            playerObject = GameObject.Find(PhotonNetwork.CurrentRoom.Players[i].UserId);
+            player = playerObject.GetComponent<Player>();
+            playerObjectList.Add(playerObject);
+            playerList.Add(player);
+
+            //自身のプレイヤーインデックスを記憶しておく
+            if (PhotonNetwork.CurrentRoom.Players[i].UserId == PhotonNetwork.LocalPlayer.UserId)
+            {
+                myPlayerIndex = i - 1;
+            }
+        }
+        
+
+        game_Button.SwitchButtonDisplay(false);
+    }
+
+    private void Update()
+    {
+        mainCamera.SetTargetObj(playerObjectList[activePlayerIndex]);
+
+        //ボタンの初期化処理
+        if (myPlayerIndex == activePlayerIndex)
+        {
+            if (isCalledOnce)
+            {
+                game_Button.SwitchButtonDisplay(true);
+                isCalledOnce = false;
+            }
+        }
+        else
+        {
+            game_Button.SwitchButtonDisplay(false);
+        }
     }
 
     /*#======================================================================#*/
@@ -39,7 +96,7 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
     /*#======================================================================#*/
     public void DeliveryDiceTheEyes(int eyes)
     {
-        player.GetDiceEyes(eyes);
+        playerList[activePlayerIndex].GetDiceEyes(eyes);
     }
 
     /*#======================================================================#*/
@@ -71,5 +128,47 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
         eventTextPanel.SetActive(false);
 
         yield break;
+    }
+
+    /*#======================================================================#*/
+    /*#    function : GetPlayerList  function                                #*/
+    /*#    summary  : プレイヤーリストを取得する                             #*/
+    /*#    argument : (I)List<Player>  playerList     -  プレイヤーリスト    #*/
+    /*#    return   : nothing                                                #*/
+    /*#======================================================================#*/
+    public void GetPlayerList(ref List<Player> playerList)
+    {
+        playerList = this.playerList;
+    }
+
+    /*#======================================================================#*/
+    /*#    function : GetPlayerObjectList  function                          #*/
+    /*#    summary  : プレイヤーオブジェクト情報リストを取得する             #*/
+    /*#    argument : (I)List<GameObject>  playerObjectList                  #*/
+    /*#                                              -  プレイヤー情報リスト #*/
+    /*#    return   : nothing                                                #*/
+    /*#======================================================================#*/
+    public void GetPlayerObjectList(ref List<GameObject> playerObjectList)
+    {
+        playerObjectList = this.playerObjectList;
+    }
+
+    /*#======================================================================#*/
+    /*#    function : ReplyActEnd  function                                  #*/
+    /*#    summary  : 行動終了報告を受け取る                                 #*/
+    /*#    argument : (I)List<GameObject>  playerObjectList                  #*/
+    /*#                                              -  プレイヤー情報リスト #*/
+    /*#    return   : nothing                                                #*/
+    /*#======================================================================#*/
+    public void ReplyActEnd()
+    {
+        activePlayerIndex++;
+
+        if (exsistsPlayerCount == activePlayerIndex)
+        {
+            activePlayerIndex = 0;
+        }
+
+        isCalledOnce = true;
     }
 }

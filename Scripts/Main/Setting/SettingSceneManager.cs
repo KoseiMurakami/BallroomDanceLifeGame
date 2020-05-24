@@ -4,6 +4,7 @@
 /*#    Summary    :    SettingSceneの管理                                        #*/
 /*#******************************************************************************#*/
 using Photon.Pun;
+using Photon.Pun.Demo.Cockpit;
 using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
@@ -50,14 +51,52 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
 
     /*#======================================================================#*/
     /*#    function : EnterTheRoom  function                                 #*/
-    /*#    summary  : 部屋に入る                                             #*/
-    /*#    argument : nothing                                                #*/
+    /*#    summary  : 部屋を設定して中に入る                                 #*/
+    /*#    argument : string nickName                 - ニックネーム         #*/
+    /*#               string roomName                 - ルーム名             #*/
     /*#    return   : nothing                                                #*/
     /*#======================================================================#*/
-    public void EnterTheRoom(string roomName)
+    public void SettingAndEnterTheRoom(string nickName, string roomName, byte maxPlayers)
     {
+        //ニックネームを設定する
+        SetMyNickName(nickName);
+
+        //ルームオプション設定
+        RoomOptions roomOptions = new RoomOptions()
+        {
+            IsVisible = true,
+            IsOpen = true,
+            MaxPlayers = maxPlayers,
+            CustomRoomProperties = new ExitGames.Client.Photon.Hashtable()
+            {
+                {
+                    "CustomProperties", "カスタムプロパティ"
+                }
+            },
+            CustomRoomPropertiesForLobby = new string[]
+            {
+                "CustomProperties"
+            }
+        };
+
         //roomNameという名前のルームに参加する(ルームがなければ作成してから参加する)
-        PhotonNetwork.JoinOrCreateRoom(roomName, new RoomOptions(), TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
+    }
+
+    /*#======================================================================#*/
+    /*#    function : EnterTheRoom  function                                 #*/
+    /*#    summary  : すでに作成済みの部屋に入る                             #*/
+    /*#    argument : string nickName                 - ニックネーム         #*/
+    /*#               string roomName                 - ルーム名             #*/
+    /*#    return   : nothing                                                #*/
+    /*#======================================================================#*/
+    public void EnterTheRoom(string nickName, string roomName)
+    {
+        //ニックネームを設定する
+        SetMyNickName(nickName);
+
+        //roomNameという名前のルームに参加する
+        PhotonNetwork.JoinRoom(roomName);
     }
 
     /*#----------------------------------------------------------------------#*/
@@ -145,7 +184,7 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
         PhotonNetwork.IsMessageQueueRunning = false;
         //ルームに移動
         SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Single);
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("LobbyScene");
         
         Debug.Log("部屋に入室しました。");
     }

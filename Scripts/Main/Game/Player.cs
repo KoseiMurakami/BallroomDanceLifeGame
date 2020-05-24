@@ -1,19 +1,20 @@
 ﻿using Photon.Pun;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviourPunCallbacks
 {
-    [SerializeField]
-    private float speed = default;
+    private float speed;
 
     private GameSceneManager gameSceneManager;
-    private Vector3 nextPosition;
+    private Animator animator;
+    private Rigidbody rb;
     private Collider squareCollider = new Collider();
-    private int restEyes = 0;
+
     private bool WalkingFlg = false;
     private bool arrivedPosFlg = true;
+    private int restEyes = 0;
+    private Vector3 nextPosition;
 
     void Start()
     {
@@ -23,7 +24,15 @@ public class Player : MonoBehaviourPunCallbacks
             Destroy(this);
         }
 
-        gameSceneManager = GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
+        gameSceneManager = 
+            GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+
+        speed = 0;
+
+        //次のマスの方向を向く
+        this.transform.LookAt(nextPosition);
     }
 
     void Update()
@@ -32,6 +41,8 @@ public class Player : MonoBehaviourPunCallbacks
         {
             StartCoroutine("walkToNextSquare");
         }
+
+        animator.SetFloat("speed", speed);
     }
 
     /*#======================================================================#*/
@@ -54,35 +65,51 @@ public class Player : MonoBehaviourPunCallbacks
     private IEnumerator walkToNextSquare()
     {
         WalkingFlg = true;
+        //フリーズを解除
+        rb.constraints = RigidbodyConstraints.None;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX;
+        rb.constraints = RigidbodyConstraints.FreezeRotationY;
+
         Vector3 vec;
         Vector3 unitVec;
 
         while (restEyes != 0)
         {
             arrivedPosFlg = false;
+            speed = 8.0f;
             vec = nextPosition - gameObject.transform.position;
             unitVec = new Vector3(vec.x / Mathf.Sqrt((vec.x * vec.x + vec.y * vec.y + vec.z * vec.z)),
                                   vec.y / Mathf.Sqrt((vec.x * vec.x + vec.y * vec.y + vec.z * vec.z)),
                                   vec.z / Mathf.Sqrt((vec.x * vec.x + vec.y * vec.y + vec.z * vec.z)));
+
             //nextposに進む
             while (!arrivedPosFlg)
             {
-                gameObject.transform.position += new Vector3(speed * unitVec.x * Time.deltaTime,
-                                                             speed * unitVec.y * Time.deltaTime,
-                                                             speed * unitVec.z * Time.deltaTime); 
+                //次のマスの方向を向く
+                this.transform.LookAt(nextPosition);
+
+                rb.MovePosition(rb.position + speed * unitVec * Time.deltaTime);
                 yield return null;
             }
+
+            //次のマスの方向を向く
+            this.transform.LookAt(nextPosition);
 
             restEyes--;
         }
 
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+
         WalkingFlg = false;
+        speed = 0;
 
         //テキストオープン、テキスト表示
         string eventText = squareCollider.gameObject.GetComponent<Square>().GetEventText();
         gameSceneManager.DisplayEventTextPanel(eventText);
 
         yield return new WaitForSeconds(3);
+
+        gameSceneManager.ReplyActEnd();
 
         yield break;
     }
@@ -95,8 +122,17 @@ public class Player : MonoBehaviourPunCallbacks
     /*#----------------------------------------------------------------------#*/
     private void OnTriggerEnter(Collider other)
     {
-        arrivedPosFlg = true;
-        squareCollider = other;
-        nextPosition = other.gameObject.GetComponent<Square>().GetNextSquarePos();
+        if (other.gameObject.tag == "Square")
+        {
+            arrivedPosFlg = true;
+            squareCollider = other;
+            nextPosition = other.gameObject.GetComponent<Square>().GetNextSquarePos();
+        }
+
+        if (other.gameObject.tag == "Finish")
+        {
+            arrivedPosFlg = true;
+            Debug.Log("ゴールしました！");
+        }
     }
 }

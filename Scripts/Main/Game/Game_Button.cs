@@ -8,6 +8,7 @@ public class Game_Button : MonoBehaviour
     [SerializeField]
     GameObject DiceEyesText = default;
 
+    private Button button;
     private GameSceneManager gameSceneManager;
     private Text eyesText;
 
@@ -35,9 +36,24 @@ public class Game_Button : MonoBehaviour
     public void RollTheDice()
     {
         int eyes;
-        eyes = Random.Range(1,6);
+        eyes = Random.Range(1,11);
+
         eyesText.text = eyes.ToString();
 
         gameSceneManager.DeliveryDiceTheEyes(eyes);
+
+        button.interactable = false;
+    }
+
+    /*#======================================================================#*/
+    /*#    function : SwitchButtonDisplay                                    #*/
+    /*#    summary  : ボタン表示を切り替える                                 #*/
+    /*#    argument : bool  displayFlg                -  表示/非表示フラグ   #*/
+    /*#    return   : nothing                                                #*/
+    /*#======================================================================#*/
+    public void SwitchButtonDisplay(bool displayFlg)
+    {
+        button = GetComponent<Button>();
+        button.interactable = displayFlg;
     }
 }
