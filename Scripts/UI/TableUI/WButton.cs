@@ -10,7 +10,7 @@ namespace WDT
 {
     public class WButton : WElement
     {
-        private SettingUI settingUI;
+        private SettingSceneManager settingSceneManager;
             
         private Button m_button;
         private Text m_text;
@@ -22,7 +22,7 @@ namespace WDT
 
         private void Start()
         {
-            settingUI = GameObject.Find("Buttons").GetComponent<SettingUI>();
+            settingSceneManager = GameObject.Find("SettingSceneManager").GetComponent<SettingSceneManager>();
         }
 
         protected override void InitElement()
@@ -56,8 +56,10 @@ namespace WDT
 #endif
             m_button.onClick.RemoveAllListeners();
             if (bindDataTable.CanSortByColumnIndex(columnIndex))
-                m_button.onClick.AddListener(() => { settingUI.PushEnterButtonInTable(rowIndex, columnIndex); });
-                //m_button.onClick.AddListener(() => { bindDataTable.OnClickButton(rowIndex, columnIndex); });
+            {
+                m_button.onClick.AddListener(() => { settingSceneManager.PushEnterButtonInTable(rowIndex); });
+                m_button.onClick.AddListener(() => { bindDataTable.OnClickButton(rowIndex, columnIndex); });
+            }
         }
     }
 }

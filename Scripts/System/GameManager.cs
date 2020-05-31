@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
+    string nickName;
 
     public void Awake()
     {
@@ -23,14 +24,30 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         DontDestroyOnLoad(gameObject);
     }
 
-    /*#----------------------------------------------------------------------#*/
-    /*#    function : LoadGameScene  function                                #*/
-    /*#    summary  : ゲームシーンをロードする                               #*/
-    /*#    argument : (O)string  name                 -  シーン名            #*/
-    /*#    return   : nothing                                                #*/
-    /*#----------------------------------------------------------------------#*/
+    /// <summary>
+    /// ゲームシーンをロードする。
+    /// </summary>
+    /// <param name="name">シーン名</param>
     public void LoadGameScene(string name)
     {
         SceneManager.LoadScene(name);
+    }
+
+    /// <summary>
+    /// ニックネームをセットする。
+    /// </summary>
+    /// <param name="name">ニックネーム名</param>
+    public void SetMyNickName(string name)
+    {
+        this.nickName = name;
+    }
+
+    /// <summary>
+    /// ニックネームを取得する。
+    /// </summary>
+    /// <returns>ニックネーム名</returns>
+    public string GetMyNickName()
+    {
+        return this.nickName;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LobyCameraMove : MonoBehaviour
 {
     [SerializeField]
-    private LobbySceneManager lobbySceneManager;
+    private LobbySceneManager lobbySceneManager = default;
 
     private GameObject targetObj;
     private Vector3 targetPos;
@@ -22,22 +22,25 @@ public class LobyCameraMove : MonoBehaviour
     void LateUpdate()
     {
         //targetの移動量分、自分も移動する
-        transform.position += targetObj.transform.position - targetPos;
-        targetPos = targetObj.transform.position;
-
-        this.transform.LookAt(targetPos);
-
-        //マウスの右クリックを押している間
-        if (Input.GetMouseButton(1))
+        if (targetObj != null)
         {
-            //マウスの移動量
-            float mouseInputX = Input.GetAxis("Mouse X");
-            float mouseInputY = Input.GetAxis("Mouse Y");
+            transform.position += targetObj.transform.position - targetPos;
+            targetPos = targetObj.transform.position;
 
-            //targetの位置のy軸を中心に回転(公転)する
-            transform.RotateAround(targetPos, Vector3.up, mouseInputX * Time.deltaTime * 200f);
-            //カメラの垂直移動
-            transform.RotateAround(targetPos, transform.right, -mouseInputY * Time.deltaTime * 200f);
+            this.transform.LookAt(targetPos);
+
+            //マウスの右クリックを押している間
+            if (Input.GetMouseButton(1))
+            {
+                //マウスの移動量
+                float mouseInputX = Input.GetAxis("Mouse X");
+                float mouseInputY = Input.GetAxis("Mouse Y");
+
+                //targetの位置のy軸を中心に回転(公転)する
+                transform.RotateAround(targetPos, Vector3.up, mouseInputX * Time.deltaTime * 200f);
+                //カメラの垂直移動
+                transform.RotateAround(targetPos, transform.right, -mouseInputY * Time.deltaTime * 200f);
+            }
         }
     }
 }

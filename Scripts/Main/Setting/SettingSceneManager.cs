@@ -3,17 +3,24 @@
 /*#                                                                              #*/
 /*#    Summary    :    SettingSceneの管理                                        #*/
 /*#******************************************************************************#*/
+using System;
 using Photon.Pun;
-using Photon.Pun.Demo.Cockpit;
 using Photon.Realtime;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SettingSceneManager : MonoBehaviourPunCallbacks
 {
+    [SerializeField]
+    private InputField roomNameInputField = default;
+
+    [SerializeField]
+    private Dropdown membersCountDropdown = default;
+
+    [SerializeField]
+    private RoomTableOperator roomTableOperator = default;
+
     private GameObject roomTable;
     private List<RoomInfo> roomInfos = new List<RoomInfo>();
 
@@ -23,7 +30,7 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
 
         roomTable = GameObject.Find("RoomTable");
-        SwitchDisplayRoomTable(false);
+        roomTable.SetActive(false);
     }
 
     /*#======================================================================#*/
@@ -38,93 +45,87 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
         return roomInfos;
     }
 
-    /*#======================================================================#*/
-    /*#    function : SwitchDisplayRoomTable  function                       #*/
-    /*#    summary  : RoomTableの表示非表示を切り替える                      #*/
-    /*#    argument : bool displayFlg                 -  表示非表示フラグ    #*/
-    /*#    return   : nothing                                                #*/
-    /*#======================================================================#*/
-    public void SwitchDisplayRoomTable(bool displayFlg)
-    {
-        roomTable.SetActive(displayFlg);
-    }
-
-    /*#======================================================================#*/
-    /*#    function : EnterTheRoom  function                                 #*/
-    /*#    summary  : 部屋を設定して中に入る                                 #*/
-    /*#    argument : string nickName                 - ニックネーム         #*/
-    /*#               string roomName                 - ルーム名             #*/
-    /*#    return   : nothing                                                #*/
-    /*#======================================================================#*/
-    public void SettingAndEnterTheRoom(string nickName, string roomName, byte maxPlayers)
-    {
-        //ニックネームを設定する
-        SetMyNickName(nickName);
-
-        //ルームオプション設定
-        RoomOptions roomOptions = new RoomOptions()
-        {
-            IsVisible = true,
-            IsOpen = true,
-            MaxPlayers = maxPlayers,
-            CustomRoomProperties = new ExitGames.Client.Photon.Hashtable()
-            {
-                {
-                    "CustomProperties", "カスタムプロパティ"
-                }
-            },
-            CustomRoomPropertiesForLobby = new string[]
-            {
-                "CustomProperties"
-            }
-        };
-
-        //roomNameという名前のルームに参加する(ルームがなければ作成してから参加する)
-        PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
-    }
-
-    /*#======================================================================#*/
-    /*#    function : EnterTheRoom  function                                 #*/
-    /*#    summary  : すでに作成済みの部屋に入る                             #*/
-    /*#    argument : string nickName                 - ニックネーム         #*/
-    /*#               string roomName                 - ルーム名             #*/
-    /*#    return   : nothing                                                #*/
-    /*#======================================================================#*/
-    public void EnterTheRoom(string nickName, string roomName)
-    {
-        //ニックネームを設定する
-        SetMyNickName(nickName);
-
-        //roomNameという名前のルームに参加する
-        PhotonNetwork.JoinRoom(roomName);
-    }
-
     /*#----------------------------------------------------------------------#*/
     /*#    function : SetMyNickName  function                                #*/
     /*#    summary  : ニックネームをつける                                   #*/
     /*#    argument : (I)string  nickName             -  ニックネーム        #*/
     /*#    return   : nothing                                                #*/
     /*#----------------------------------------------------------------------#*/
-    private void SetMyNickName(string nickName)
+    private void SetMyNickName()
     {
         if (PhotonNetwork.IsConnected)
         {
-            PhotonNetwork.LocalPlayer.NickName = nickName;
+            PhotonNetwork.LocalPlayer.NickName = GameManager.Instance.GetMyNickName();
         }
     }
 
-    /*#----------------------------------------------------------------------#*/
-    /*#    function : joinLobby  function                                    #*/
-    /*#    summary  : ロビーに入る                                           #*/
-    /*#    argument : nothing                                                #*/
-    /*#    return   : nothing                                                #*/
-    /*#----------------------------------------------------------------------#*/
     private void joinLobby()
     {
         if (PhotonNetwork.IsConnected)
         {
             PhotonNetwork.JoinLobby();
         }
+    }
+
+    /// <summary>
+    /// ホームボタンを押したときの処理。
+    /// </summary>
+    public void PushHomeButton()
+    {
+        //Photonロビーから出る
+        PhotonNetwork.LeaveLobby();
+        //Photonネットワークの接続を切る
+        PhotonNetwork.Disconnect();
+        //ホームへ
+        GameManager.Instance.LoadGameScene("OpenningScene");
+    }
+
+    /// <summary>
+    /// 作成して入室ボタンを押したときの処理
+    /// </summary>
+    public void PushEnterButton()
+    {
+        //ルームオプション設定
+        RoomOptions roomOptions = new RoomOptions()
+        {
+            IsVisible = true,
+            IsOpen = true,
+            MaxPlayers = Convert.ToByte(membersCountDropdown.value + 1),
+            PlayerTtl = 1000 * 60
+            //MaxPlayers = Convert.ToByte(membersCountDropdown.value),
+            //CustomRoomProperties = new ExitGames.Client.Photon.Hashtable()
+            //{
+            //    {
+            //        "CustomProperties", "カスタムプロパティ"
+            //    }
+            //},
+            //CustomRoomPropertiesForLobby = new string[]
+            //{
+            //    "CustomProperties"
+            //}
+        };
+
+        //設定された名前のルームを作成して参加する。
+        PhotonNetwork.JoinOrCreateRoom(roomNameInputField.text, roomOptions, TypedLobby.Default);
+    }
+
+    /// <summary>
+    /// ルームテーブル上の入室ボタンを押したときの処理。
+    /// </summary>
+    /// <param name="rowIndex"></param>
+    public void PushEnterButtonInTable(int rowIndex)
+    {
+        //すでに作成済みのルームをテーブルから指定して参加する
+        PhotonNetwork.JoinRoom(roomTableOperator.GetRoomNameByCellIndex(rowIndex));
+    }
+
+    /// <summary>
+    /// 部屋を探すボタンを押したときの処理。
+    /// </summary>
+    public void PushSeekRoomButton()
+    {
+        roomTable.SetActive(true);
+        roomTableOperator.InitRoomTable();
     }
 
     /*★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★*/
@@ -134,8 +135,8 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
     public override void OnConnected()
     {
         Debug.Log("ネットワークに接続しました。");
-        SetMyNickName("guest player");
-        Debug.Log("ようこそ、guest Playerさん。");
+        SetMyNickName();
+        Debug.Log("ようこそ、" + PhotonNetwork.LocalPlayer.NickName + "さん。");
     }
 
     /* Photonから切断されたとき */
@@ -183,8 +184,7 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
         //遷移前のシーンでネットワークオブジェクトを生成しないようにする
         PhotonNetwork.IsMessageQueueRunning = false;
         //ルームに移動
-        SceneManager.LoadSceneAsync("GameScene", LoadSceneMode.Single);
-        SceneManager.LoadScene("LobbyScene");
+        GameManager.Instance.LoadGameScene("LobbyScene");
         
         Debug.Log("部屋に入室しました。");
     }
@@ -208,19 +208,19 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
     }
 
     /* 他のプレイヤーが入室したとき */
-    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
+    public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log("他のプレイヤーが入室してきました。");
     }
 
     /* 他のプレイヤーが退室したとき */
-    public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
+    public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         Debug.Log("他のプレイヤーが退室しました。");
     }
 
     /* マスタークライアントが変わったとき */
-    public override void OnMasterClientSwitched(Photon.Realtime.Player newMasterClient)
+    public override void OnMasterClientSwitched(Player newMasterClient)
     {
         Debug.Log("マスタークライアントが変更されました。");
     }
@@ -246,7 +246,7 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
     }
 
     /* プレイヤープロパティが更新されたとき */
-    public override void OnPlayerPropertiesUpdate(Photon.Realtime.Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
+    public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
         Debug.Log("プレイヤープロパティが更新されました。");
     }

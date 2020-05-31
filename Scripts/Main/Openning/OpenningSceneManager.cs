@@ -1,18 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.UI;
+
 public class OpenningSceneManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        SceneManager.LoadScene("SettingScene");
-    }
+    [SerializeField]
+    private InputField inputField = default;
 
-    // Update is called once per frame
+    [SerializeField]
+    private Button nextButton = default;
+
     void Update()
     {
-        
+        nextButton.interactable = true;
+
+        if (inputField.text == "")
+        {
+            nextButton.interactable = false;
+        }
+    }
+
+    /// <summary>
+    /// NextButtonを押したときの処理。
+    /// </summary>
+    public void PushNextButton()
+    {
+        if (inputField.text != "")
+        {
+            GameManager.Instance.SetMyNickName(inputField.text);
+            GameManager.Instance.LoadGameScene("SettingScene");
+        }
     }
 }

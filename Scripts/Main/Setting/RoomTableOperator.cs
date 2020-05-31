@@ -84,7 +84,7 @@ public class RoomTableOperator : MonoBehaviour
             {
                 roomInfos[i].Name,
                 "入室する",
-                roomInfos[i].PlayerCount + "/ 20"
+                roomInfos[i].PlayerCount + " / " + roomInfos[i].MaxPlayers
             };
             m_datas.Add(temp_list);
         }
