@@ -12,7 +12,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
-    string nickName;
+    public string NickName { set; get; }
+    private Dictionary<string, int> playersScores = new Dictionary<string, int>();
 
     public void Awake()
     {
@@ -22,6 +23,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             return;
         }
         DontDestroyOnLoad(gameObject);
+
+        playersScores.Clear();
     }
 
     /// <summary>
@@ -33,21 +36,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         SceneManager.LoadScene(name);
     }
 
-    /// <summary>
-    /// ニックネームをセットする。
-    /// </summary>
-    /// <param name="name">ニックネーム名</param>
-    public void SetMyNickName(string name)
+    public void SetPlayersScores(string playerName, int points)
     {
-        this.nickName = name;
+        playersScores.Add(playerName, points);
     }
 
-    /// <summary>
-    /// ニックネームを取得する。
-    /// </summary>
-    /// <returns>ニックネーム名</returns>
-    public string GetMyNickName()
+    public Dictionary<string, int> GetPlayersScores()
     {
-        return this.nickName;
+        return this.playersScores;
     }
 }

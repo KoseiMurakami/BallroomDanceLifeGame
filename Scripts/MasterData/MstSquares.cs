@@ -7,5 +7,5 @@ using UnityEngine;
 public class MstSquares : ScriptableObject
 {
 	//public List<EntityType> Entities; // Replace 'EntityType' to an actual type that is serializable.
-	public List<MstSquaresDef> entities;
+	public List<MstSquaresDefForExcel> entities;
 }

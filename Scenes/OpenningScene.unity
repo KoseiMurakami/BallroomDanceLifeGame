@@ -802,13 +802,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1197851550}
   m_TextComponent: {fileID: 922724843}
   m_Placeholder: {fileID: 2072659149}
-  m_ContentType: 5
+  m_ContentType: 0
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 6
+  m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 4
+  m_CharacterValidation: 0
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -1154,7 +1154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: your NickName
+  m_Text: yourNickName
 --- !u!222 &2072659150
 CanvasRenderer:
   m_ObjectHideFlags: 0

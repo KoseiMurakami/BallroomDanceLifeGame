@@ -7,7 +7,34 @@ namespace LifeGame
     public enum SquareKindDef 
     {
         normal,
-        forced
+        forced,
+        warp,
+        brotherShop,
+        partnerShop,
+        dualShop
+    }
+
+    public enum PointKindDef
+    {
+        MoneyPoints,
+        DancePoints,
+        StudyPoints,
+        PopularityPoints,
+        LovePoints
+    }
+
+    public enum LankKindDef
+    {
+        BrotherLank,
+        PartnerLank
+    }
+
+    public enum CompeResult
+    {
+        LostQualifying,
+        SemiFinalist,
+        Finalist,
+        Champion
     }
 
     public class SquareBase : MonoBehaviour

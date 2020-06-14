@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainCamera : MonoBehaviour
@@ -14,7 +13,7 @@ public class MainCamera : MonoBehaviour
     private float speed = default;
 
     private GameObject targetObj;
-    private Vector3 defaultDistance;
+    private Vector3 defaultDistance = new Vector3(7.7f, 13.0f, 12.2f);
     private Vector3 startPos;
     private Vector3 targetPos;
     private bool activeFlg = false;
@@ -26,17 +25,36 @@ public class MainCamera : MonoBehaviour
         targetObj = startPoint;
     }
 
-    // Update is called once per frame
-    void Update()
+    // LateUptateでカメラのブレ予防
+    void LateUpdate()
     {
         if (activeFlg && targetObj != null)
         {
+            //1f後のターゲットオプションオフセット
+            Vector3 offset = targetObj.transform.position - targetPos;
+
+            transform.position += offset;
+
+            this.transform.LookAt(targetPos);
+
+            //マウスの右クリックを押している間
+            if (Input.GetMouseButton(1))
+            {
+                //マウスの移動量
+                float mouseInputX = Input.GetAxis("Mouse X");
+                float mouseInputY = Input.GetAxis("Mouse Y");
+
+                //targetの位置のy軸を中心に回転(公転)する
+                transform.RotateAround(targetPos, Vector3.up, mouseInputX * Time.deltaTime * 200f);
+                //カメラの垂直移動
+                transform.RotateAround(targetPos, transform.right, -mouseInputY * Time.deltaTime * 200f);
+            }
+
+            //1f前のターゲットポジションを取得しておく
             this.targetPos = targetObj.transform.position;
 
-            //常にtargetObjと適切な距離を保っておく
-            transform.position = targetPos + defaultDistance;
-
-            transform.LookAt(targetPos);
+            //ターンごとにアングル変わるとだるいのでここでデフォルト登録
+            defaultDistance = transform.position - targetPos;
         }
     }
 
@@ -62,8 +80,6 @@ public class MainCamera : MonoBehaviour
 
         gameSceneManager.RequireActStart();
 
-        activeFlg = true;
-
         yield break;
     }
 
@@ -75,6 +91,9 @@ public class MainCamera : MonoBehaviour
     /*#======================================================================#*/
     public void SetTargetObj(GameObject targetObj)
     {
+        activeFlg = true;
         this.targetObj = targetObj;
+        this.targetPos = targetObj.transform.position;
+        transform.position = targetPos + defaultDistance;
     }
 }

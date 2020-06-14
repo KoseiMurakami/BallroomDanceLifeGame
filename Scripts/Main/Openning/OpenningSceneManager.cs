@@ -26,7 +26,7 @@ public class OpenningSceneManager : MonoBehaviour
     {
         if (inputField.text != "")
         {
-            GameManager.Instance.SetMyNickName(inputField.text);
+            GameManager.Instance.NickName = inputField.text;
             GameManager.Instance.LoadGameScene("SettingScene");
         }
     }

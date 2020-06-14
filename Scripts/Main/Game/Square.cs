@@ -5,63 +5,36 @@ using LifeGame;
 
 public class Square : SquareBase
 {
-    private MstSquaresDef squaresInfo = new MstSquaresDef();
-    private Vector3 nextPos;
-
-    // Start is called before the first frame update
-    protected override void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private SquareInfo squareInfo = new SquareInfo();
+    public bool IsForced { set; get; }
+    public Vector3 NextPos { set; get; }
+    public Vector3 WarpPos { set; get; }
 
     /*#======================================================================#*/
     /*#    function : SetSquareInfo  function                                #*/
     /*#    summary  : マスの情報をセットする                                 #*/
-    /*#    argument : MstSquaresDef  data             -  マス情報            #*/
+    /*#    argument : SquareInfo  data                -  マス情報            #*/
     /*#    return   : nothing                                                #*/
     /*#======================================================================#*/
-    public void SetSquareInfo(MstSquaresDef data)
+    public void SetSquareInfo(SquareInfo data)
     {
-        squaresInfo = data;
+        squareInfo = data;
+        if (data.squareKind == SquareKindDef.forced)
+        {
+            IsForced = true;
+        }
+        else
+        {
+            IsForced = false;
+        }
     }
 
-    /*#======================================================================#*/
-    /*#    function : SetNextSquarePos  function  　                         #*/
-    /*#    summary  : 次のマス位置をセットする                               #*/
-    /*#    argument : int            index            -  マスインデックス    #*/
-    /*#               squareKindDef  kind             -  マス種別            #*/
-    /*#    return   : nothing                                                #*/
-    /*#======================================================================#*/
-    public void SetNextSquarePos(Vector3 pos)
+    /// <summary>
+    /// マス情報を取得する
+    /// </summary>
+    /// <returns>マス情報</returns>
+    public SquareInfo GetSquareInfo()
     {
-        nextPos = pos;
-    }
-
-    /*#======================================================================#*/
-    /*#    function : GetNextSquarePos  function                             #*/
-    /*#    summary  : 次のマスの位置を取得する                               #*/
-    /*#    argument : nothing                                                #*/
-    /*#    return   : int  nextIndex              -  次のマスインデックス    #*/
-    /*#======================================================================#*/
-    public Vector3 GetNextSquarePos()
-    {
-        return nextPos;
-    }
-
-    /*#======================================================================#*/
-    /*#    function : GetNextSquarePos  function                             #*/
-    /*#    summary  : 次のマスの位置を取得する                               #*/
-    /*#    argument : nothing                                                #*/
-    /*#    return   : string  eventText           -  マス停止時テキスト      #*/
-    /*#======================================================================#*/
-    public string GetEventText()
-    {
-        return squaresInfo.eventText;
+        return squareInfo;
     }
 }

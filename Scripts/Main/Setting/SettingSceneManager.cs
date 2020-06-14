@@ -55,7 +55,7 @@ public class SettingSceneManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsConnected)
         {
-            PhotonNetwork.LocalPlayer.NickName = GameManager.Instance.GetMyNickName();
+            PhotonNetwork.LocalPlayer.NickName = GameManager.Instance.NickName;
         }
     }
 
