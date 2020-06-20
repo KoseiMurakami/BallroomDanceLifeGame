@@ -27,6 +27,9 @@ public class GameSceneManager : MonoBehaviourPunCallbacks, IPunTurnManagerCallba
     private GameObject accountingPanel = default;
 
     [SerializeField]
+    private GameObject stealTextPanel = default;
+
+    [SerializeField]
     private MainCamera mainCamera = default;
 
     [SerializeField]
@@ -230,6 +233,43 @@ public class GameSceneManager : MonoBehaviourPunCallbacks, IPunTurnManagerCallba
     }
 
     /// <summary>
+    /// stealTextPanelを表示する
+    /// </summary>
+    /// <param name="text"></param>
+    public void DisplayStealTextPanel(string text)
+    {
+        GameObject BrotherButton = stealTextPanel.transform.Find("BrotherButton").gameObject;
+        GameObject PartnerButton = stealTextPanel.transform.Find("PartnerButton").gameObject;
+        GameObject NoButton = stealTextPanel.transform.Find("NoButton").gameObject;
+        GameObject TextButton = stealTextPanel.transform.Find("TextButton").gameObject;
+
+        stealTextPanel.SetActive(true);
+        TextButton.SetActive(false);
+        Text displayText = stealTextPanel.transform.Find("StealText").GetComponent<Text>();
+        displayText.text = text;
+
+        if (isThisMyTurn())
+        {
+            displayText.text = text;
+            BrotherButton.SetActive(true);
+            PartnerButton.SetActive(true);
+            NoButton.SetActive(true);
+
+            BrotherButton.GetComponent<Button>().onClick.AddListener(() => { PushBrotherButtonInStealPanel(); });
+            PartnerButton.GetComponent<Button>().onClick.AddListener(() => { PushPartnerButtonInStealPanel(); });
+            NoButton.GetComponent<Button>().onClick.AddListener(() => { PushNoButtonInStealPanel(); });
+        }
+        else
+        {
+            displayText.text = text + '\n'
+                + gamePlayerList[activePlayerIndex].PlayerName + "さんが勧誘中......";
+            BrotherButton.SetActive(false);
+            PartnerButton.SetActive(false);
+            NoButton.SetActive(false);
+        }
+    }
+
+    /// <summary>
     /// アクティブプレイヤーインデックスをセットする
     /// </summary>
     private void SetActivePlayerIndex()
@@ -284,6 +324,22 @@ public class GameSceneManager : MonoBehaviourPunCallbacks, IPunTurnManagerCallba
         Text pointText = playerPanelList[activePlayerIndex].transform.
             Find(lankKind + "/" + lankKind + "Text").GetComponent<Text>();
         pointText.text = gamePlayerList[activePlayerIndex].GetLanks(lankKind).ToString();
+    }
+
+    /// <summary>
+    /// 他プレイヤーパネルのランク情報を更新する
+    /// </summary>
+    /// <param name="playerIndex"></param>
+    /// <param name="lankKind"></param>
+    /// <param name="points"></param>
+    public void UpdatePlayerPanel(int playerIndex, LankKindDef lankKind, int points)
+    {
+        //プレイヤーにランク加算
+        gamePlayerList[playerIndex].SetAddLanks(lankKind, points);
+        //プレイヤーパネルの子要素を検索してポイント追加
+        Text pointText = playerPanelList[playerIndex].transform.
+            Find(lankKind + "/" + lankKind + "Text").GetComponent<Text>();
+        pointText.text = gamePlayerList[playerIndex].GetLanks(lankKind).ToString();
     }
 
     /// <summary>
@@ -584,6 +640,77 @@ public class GameSceneManager : MonoBehaviourPunCallbacks, IPunTurnManagerCallba
         PhotonNetwork.LocalPlayer.SetCustomProperties(hashtable);
     }
 
+    public void PushBrotherButtonInStealPanel()
+    {
+        bool stealable = false;
+        int playerIndex = 0;
+        List<GamePlayer> playerList = new List<GamePlayer>();
+
+        //プレイヤー全体から舎弟を1人以上連れているプレイヤーをリスト化する
+        for (int i = 0; i < gamePlayerList.Count; i++)
+        {
+            if (gamePlayerList[i].GetLanks(LankKindDef.BrotherLank) > 0)
+            {
+                playerList.Add(gamePlayerList[i]);
+            }
+        }
+
+        //プレイヤーリストのうちランダムで奪うプレイヤーを選ぶ
+        if (playerList.Count != 0)
+        {
+            stealable = true;
+            playerIndex = Random.Range(0, playerList.Count + 1);
+        }
+
+        var hashtable = new ExitGames.Client.Photon.Hashtable()
+        {
+            ["Steal"] = stealable,
+            ["playerIndex"] = playerList[playerIndex].PlayerId,
+            ["BrotherLank"] = 1
+        };
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hashtable);
+    }
+
+    public void PushPartnerButtonInStealPanel()
+    {
+        bool stealable = false;
+        int playerIndex = 0;
+        List<GamePlayer> playerList = new List<GamePlayer>();
+
+        //プレイヤー全体から愛人を1人以上連れているプレイヤーをリスト化する
+        for (int i = 0; i < gamePlayerList.Count; i++)
+        {
+            if (gamePlayerList[i].GetLanks(LankKindDef.PartnerLank) > 0)
+            {
+                playerList.Add(gamePlayerList[i]);
+            }
+        }
+
+        //プレイヤーリストのうちランダムで奪うプレイヤーを選ぶ
+        if (playerList.Count > 0)
+        {
+            stealable = true;
+            playerIndex = Random.Range(0, playerList.Count + 1);
+        }
+
+        var hashtable = new ExitGames.Client.Photon.Hashtable()
+        {
+            ["Steal"] = stealable,
+            ["PlayerIndex"] = playerList[playerIndex].PlayerId,
+            ["PartnerLank"] = 1
+        };
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hashtable);
+    }
+
+    public void PushNoButtonInStealPanel()
+    {
+        var hashtable = new ExitGames.Client.Photon.Hashtable()
+        {
+            ["Steal"] = false
+        };
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hashtable);
+    }
+
     /// <summary>
     /// すべてのプレイヤーがゴールしているかどうか調べる
     /// </summary>
@@ -655,6 +782,13 @@ public class GameSceneManager : MonoBehaviourPunCallbacks, IPunTurnManagerCallba
     {
         SetActivePlayerIndex();
         mainCamera.SetTargetObj(playerObjectList[activePlayerIndex]);
+
+        foreach (GameObject panels in playerPanelList)
+        {
+            panels.GetComponent<Image>().color = new Color(255, 255, 255, 0.5f);
+        }
+
+        playerPanelList[activePlayerIndex].GetComponent<Image>().color = new Color(255, 255, 255, 1.0f);
 
         //すでにアクティブプレイヤーがゴールしていたときの処理
         if (gamePlayerList[activePlayerIndex].FinishedFlg)
@@ -857,6 +991,50 @@ public class GameSceneManager : MonoBehaviourPunCallbacks, IPunTurnManagerCallba
                     DisplayEventTextPanel(gamePlayerList[activePlayerIndex].PlayerName + "さんは見事優勝を飾りました！！！！" + '\n' +
                         "全ポイント +15P");
                     break;
+            }
+        }
+
+        //stealマスに止まったとき
+        if (changedProps.TryGetValue("Steal", out object stealable))
+        {
+            stealTextPanel.SetActive(false);
+
+            if ((bool)stealable)
+            {
+                int playerIndex;
+                if (changedProps.TryGetValue("PlayerIndex", out object playerIndexObject))
+                {
+                    playerIndex = (int)playerIndexObject;
+
+                    if (changedProps.TryGetValue("BrotherLank", out object brotherLankObject))
+                    {
+                        UpdatePlayerPanel(LankKindDef.BrotherLank, 1);
+                        UpdatePlayerPanel(PointKindDef.MoneyPoints, -50);
+                        UpdatePlayerPanel(playerIndex, LankKindDef.BrotherLank, -1);
+                        DisplayEventTextPanel(gamePlayerList[activePlayerIndex].PlayerName + "さんは" +
+                            gamePlayerList[playerIndex].PlayerName + "さんの舎弟を1人勧誘しました。");
+                    }
+
+                    if (changedProps.TryGetValue("PartnerLank", out object partnerLankObject))
+                    {
+                        UpdatePlayerPanel(LankKindDef.PartnerLank, 1);
+                        UpdatePlayerPanel(PointKindDef.MoneyPoints, -50);
+                        UpdatePlayerPanel(playerIndex, LankKindDef.PartnerLank, -1);
+                        DisplayEventTextPanel(gamePlayerList[activePlayerIndex].PlayerName + "さんは" +
+                            gamePlayerList[playerIndex].PlayerName + "さんの愛人を1人誘惑しました。");
+                    }
+                }
+            }
+            else
+            {
+                if (PhotonNetwork.CurrentRoom.MaxPlayers == 1)
+                {
+                    DisplayEventTextPanel("略奪可能なプレイヤーがいませんでした。");
+                }
+                else
+                {
+                    DisplayEventTextPanel(gamePlayerList[activePlayerIndex].PlayerName + "さんは略奪しませんでした。");
+                }
             }
         }
     }

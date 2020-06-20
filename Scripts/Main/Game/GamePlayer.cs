@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class GamePlayer : MonoBehaviour
 {
+    public bool AutomaticFlg { set; get; }
     public int PlayerId { set; get; }
     public string PlayerName { set; get; }
 
@@ -33,6 +34,7 @@ public class GamePlayer : MonoBehaviour
 
     void Start()
     {
+        AutomaticFlg = false;
         gameSceneManager = 
             GameObject.Find("GameSceneManager").GetComponent<GameSceneManager>();
         diceButton = GameObject.Find("DiceButton").GetComponent<Button>();
@@ -323,6 +325,11 @@ public class GamePlayer : MonoBehaviour
         else if (squareInfo.squareKind == SquareKindDef.forced)
         {
             gameSceneManager.DisplayCompeTextPanel(squareInfo.eventText + addText, points[PointKindDef.DancePoints]);
+        }
+        //止まったマスがスチールマスならば
+        else if (squareInfo.squareKind == SquareKindDef.steal)
+        {
+            gameSceneManager.DisplayStealTextPanel(squareInfo.eventText);
         }
         //それ以外のとき
         else

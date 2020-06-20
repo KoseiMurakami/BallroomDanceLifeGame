@@ -6,14 +6,13 @@ public class MapMaker : MonoBehaviour
 {
     private MasterDataRepository masterDataRepository;
     private readonly List<Square> squareList = new List<Square>();
-    private List<SquareInfo> squareInfList;
+    private List<SquareInfo> squareInfList = new List<SquareInfo>();
     private readonly Dictionary<int, GameObject> squareObjDic = new Dictionary<int, GameObject>();
 
     void Start()
     {
         int roopIndex = 0;
         masterDataRepository = Resources.Load<MasterDataRepository>("MasterData/MasterDataRepository");
-        squareInfList = new List<SquareInfo>();
         masterDataRepository.GetSquareInfList(ref squareInfList);
 
         //子オブジェクトをすべて取得し、コンポーネントを追加、設定
@@ -31,12 +30,18 @@ public class MapMaker : MonoBehaviour
             switch (squareInfList[roopIndex].squareKind)
             {
                 case SquareKindDef.forced:
-                    childTransform.GetComponent<Renderer>().material.color = Color.red;
+                    childTransform.GetComponent<Renderer>().material.color = Color.white;
                     break;
                 case SquareKindDef.brotherShop:
                 case SquareKindDef.partnerShop:
                 case SquareKindDef.dualShop:
                     childTransform.GetComponent<Renderer>().material.color = Color.green;
+                    break;
+                case SquareKindDef.steal:
+                    childTransform.GetComponent<Renderer>().material.color = Color.black;
+                    break;
+                case SquareKindDef.warp:
+                    childTransform.GetComponent<Renderer>().material.color = Color.red;
                     break;
             }
 

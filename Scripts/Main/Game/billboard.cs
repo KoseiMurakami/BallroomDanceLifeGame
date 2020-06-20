@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class billboard : MonoBehaviour
+public class Billboard : MonoBehaviour
 {
     [SerializeField]
     private Sprite[] info = default;
@@ -32,12 +32,12 @@ public class billboard : MonoBehaviour
 
     public void UpdateDisplay()
     {
-        image.sprite = info[displayIndex];
         displayIndex++;
-
         if (displayIndex >= info.Length)
         {
             displayIndex = 0;
         }
+
+        image.sprite = info[displayIndex];
     }
 }

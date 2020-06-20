@@ -11,7 +11,8 @@ namespace LifeGame
         warp,
         brotherShop,
         partnerShop,
-        dualShop
+        dualShop,
+        steal
     }
 
     public enum PointKindDef

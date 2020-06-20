@@ -40,6 +40,8 @@ public class LobbySceneManager : MonoBehaviourPunCallbacks
         myPlayerInLobby.GetComponent<LobbyPlayer>();
 
         PhotonNetwork.IsMessageQueueRunning = true;
+
+        StartCoroutine("keepText");
     }
 
     void Update()
@@ -60,6 +62,8 @@ public class LobbySceneManager : MonoBehaviourPunCallbacks
     {
         eventMessage.text = newPlayer.NickName + "さんが入室しました。";
         StartCoroutine("keepText");
+        membersCount.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString() +
+            " / " + PhotonNetwork.CurrentRoom.MaxPlayers.ToString();
     }
 
     private IEnumerator keepText()
